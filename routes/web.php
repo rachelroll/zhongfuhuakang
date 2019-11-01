@@ -10,7 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// 首页
+Route::get('/', 'IndexController@index')->name('index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// 关于我们
+Route::get('/overview', 'AboutController@overview')->name('about.overview'); // 公司概况
+Route::get('/structure', 'AboutController@structure')->name('about.structure'); // 组织架构
+Route::get('/culture', 'AboutController@culture')->name('about.culture'); // 企业文化
