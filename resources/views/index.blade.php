@@ -51,6 +51,25 @@
             margin: 0 10px;
             font-size: 13px;
         }
+
+        .swiper-slide img {
+            width: 100%;
+        }
+
+        .mask {
+            position: absolute;
+            top: 50px;
+            filter: alpha(opacity=60);
+            background-color: #000;
+            z-index: 1002;
+            left: 0;
+            opacity:0.6;
+            -moz-opacity:0.5;
+            padding: 80px 16px 16px;
+            font-size: 16px;
+            line-height: 30px;
+            color: white;
+        }
     </style>
 @endsection
 @section('content')
@@ -82,17 +101,14 @@
             </a>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
+    <div class="blank-block"></div>
     <div class="container">
         <div>
             <h3 class="text-center">资讯中心</h3>
             <p class="text-center font-weight-lighter">NEWS CENTER</p>
         </div>
     </div>
-    <br>
-    <br>
+    <div class="blank-block"></div>
     <div class="container">
         <div class="row">
             <div class="col-7">
@@ -165,23 +181,95 @@
 
     <div class="blank-block"></div>
 
-    <div class="container" style="background-color: #fff; padding: 80px 0 0 0;">
+    <div class="container" style="background-color: #fff; padding: 40px 0;">
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image:url(./img/new/01-Company%20profile.jpg)"></div>
-                <div class="swiper-slide" style="background-image:url(./images/nature-2.jpg)"></div>
-                <div class="swiper-slide" style="background-image:url(./images/nature-3.jpg)"></div>
-                <div class="swiper-slide" style="background-image:url(./images/nature-4.jpg)"></div>
-                <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)"></div>
-                <div class="swiper-slide" style="background-image:url(./images/nature-6.jpg)"></div>
-                <div class="swiper-slide" style="background-image:url(./images/nature-7.jpg)"></div>
-                <div class="swiper-slide" style="background-image:url(./images/nature-8.jpg)"></div>
-                <div class="swiper-slide" style="background-image:url(./images/nature-9.jpg)"></div>
-                <div class="swiper-slide" style="background-image:url(./images/nature-1.jpg0)"></div>
+                <div class="swiper-slide">
+                    <div class="img-block">
+                        <a href="">
+                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                        </a>
+                        <div class="mask" style="display: none">
+                            <h5>关于我们</h5>
+                            <p>这里是关于我们</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-block">
+                        <a href="">
+                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                        </a>
+                        <div class="mask" style="display: none">
+                            <h5>关于我们</h5>
+                            <p>这里是关于我们</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-block">
+                        <a href="">
+                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                        </a>
+                        <div class="mask" style="display: none">
+                            <h5>资讯中心</h5>
+                            <p>这里是关于我们</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-block">
+                        <a href="">
+                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                        </a>
+                        <div class="mask" style="display: none">
+                            <h5>业务布局</h5>
+                            <p>这里是关于我们</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-block">
+                        <a href="">
+                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                        </a>
+                        <div class="mask" style="display: none">
+                            <h5>关于我们</h5>
+                            <p>这里是关于我们</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-block">
+                        <a href="">
+                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                        </a>
+                        <div class="mask" style="display: none">
+                            <h5>关于我们</h5>
+                            <p>这里是关于我们</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-block">
+                        <a href="">
+                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                        </a>
+                        <div class="mask" style="display: none">
+                            <h5>关于我们</h5>
+                            <p>这里是关于我们</p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            {{--            <div class="swiper-button-next"></div>--}}
+            {{--            <div class="swiper-button-prev"></div>--}}
         </div>
     </div>
 
@@ -237,18 +325,7 @@
 
     <div class="blank-block"></div>
 
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-auto mr-auto">
-                <a href="">联系我们</a>
-                <a href="">法律声明</a>
-                <a href="">宾客留言</a>
-            </div>
-            <div class="col-auto">
-                <p>Copyright © 深圳市大生农业集团有限公司 粤ICP备14063903号</p>
-            </div>
-        </div>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
@@ -295,21 +372,15 @@
     </script>
 
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: false,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows : true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
+        $(document).ready(function(){
+            $(".img-block").hover(function(){
+                $(this).children(".mask").css("height",$(".image").height());
+                $(this).children(".mask").css("width",$(".image").width());
+                $(this).children(".mask").show();
+            }, function(){
+                $(this).children(".mask").hide();
+            });
         });
     </script>
+
 @stop

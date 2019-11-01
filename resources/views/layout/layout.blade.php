@@ -18,28 +18,58 @@
 <body>
 
 <div class="container">
-    <div class="row justify-content-between" style=" height: 60px">
-        <div class="col-auto mr-auto" style="border: 1px solid red;">.col-12 .col-md-8</div>
-        <div class="col-auto" style="border: 1px solid red">
+    <div class="row justify-content-between" style=" height: 60px; margin-top: 30px">
+        <div class="col-auto mr-auto">
+            <img src="" alt=""/>
+        </div>
+        <div class="col-auto">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">首页</a>
+                    <a class="nav-link active" href="{{ route('index') }}">首页</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">关于我们</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">公司概况</a>
-                        <a class="dropdown-item" href="#">组织架构</a>
-                        <a class="dropdown-item" href="#">公司概况</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
+                        <a class="dropdown-item" href="{{ route('about.overview') }}">公司概况</a>
+                        <a class="dropdown-item" href="{{ route('about.structure') }}">组织架构</a>
+                        <a class="dropdown-item" href="{{ route('about.culture') }}">企业文化</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">资讯中心</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('about.overview') }}">资讯中心</a>
+                        <a class="dropdown-item" href="{{ route('about.structure') }}">资讯中心</a>
+                        <a class="dropdown-item" href="{{ route('about.culture') }}">资讯中心</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">业务布局</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">业务布局</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">业务体系</a>
+                        <a class="dropdown-item" href="#">战略布局</a>
+                        <a class="dropdown-item" href="#">农业生产</a>
+                        <a class="dropdown-item" href="#">乡村旅游观光</a>
+                        <a class="dropdown-item" href="#">电子商务+农业</a>
+                        <a class="dropdown-item" href="#">规划计划</a>
+                        <a class="dropdown-item" href="#">民宿</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">公司概况</a>
+                        <a class="dropdown-item" href="#">组织架构</a>
+                        <a class="dropdown-item" href="#">企业文化</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">公司概况</a>
+                        <a class="dropdown-item" href="#">组织架构</a>
+                        <a class="dropdown-item" href="#">企业文化</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -48,6 +78,8 @@
 
 
 @yield('content')
+
+@include('layout.footer')
 
 
 <!-- Optional JavaScript -->
