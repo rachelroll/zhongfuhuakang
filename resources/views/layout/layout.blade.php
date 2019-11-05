@@ -13,6 +13,12 @@
 
     @yield('css')
 
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+
     <title>北京中福华康农业开发有限公司</title>
 </head>
 <body>
@@ -36,7 +42,7 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('news.index') }}" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
+                    <a class="nav-link dropdown-toggle"  href="{{ route('news.index') }}" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
                     <div class="dropdown-menu" role="menu">
                         <a class="dropdown-item" href="{{ route('news.list', ['id' => 1]) }}">公司新闻</a>
                         <a class="dropdown-item" href="{{ route('news.list', ['id' => 2]) }}">圆梦乡村</a>
