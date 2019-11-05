@@ -36,11 +36,12 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('news.index') }}" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ route('about.overview') }}">资讯中心</a>
-                        <a class="dropdown-item" href="{{ route('about.structure') }}">资讯中心</a>
-                        <a class="dropdown-item" href="{{ route('about.culture') }}">资讯中心</a>
+                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 1]) }}">公司新闻</a>
+                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 2]) }}">圆梦乡村</a>
+                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 3]) }}">专题系列</a>
+                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 4]) }}">行业动态</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
