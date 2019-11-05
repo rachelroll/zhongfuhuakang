@@ -9,9 +9,7 @@
     @endsection
 
 @section('content')
-    <div class="container-fluit">
-        <img class="banner" src="./img/new/03-corporate culture-1.jpg" alt=""/>
-    </div>
+    @include('news.banner')
 
     <div class="blank-block"></div>
 
