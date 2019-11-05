@@ -95,6 +95,9 @@
       <path value="$PROJECT_DIR$/vendor/spatie/once" />
       <path value="$PROJECT_DIR$/vendor/moontoast/math" />
       <path value="$PROJECT_DIR$/vendor/coderello/laravel-nova-lang" />
+      <path value="$PROJECT_DIR$/vendor/aliyuncs/oss-sdk-php" />
+      <path value="$PROJECT_DIR$/vendor/jacobcyl/ali-oss-storage" />
+      <path value="$PROJECT_DIR$/vendor/ajhaupt7/image-upload-preview" />
     </include_path>
   </component>
   <component name="PhpUnit">

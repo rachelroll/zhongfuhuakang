@@ -20,6 +20,7 @@ class CreateNewsTable extends Migration
             $table->string('content')->default('')->comment('新闻内容');
             $table->string('author')->default('')->comment('新闻作者');
             $table->string('time')->default('')->comment('新闻发布时间');
+            $table->string('cover')->default('')->comment('封面图');
             $table->tinyInteger('type')->default(0)->comment('新闻分类; 0: 公司新闻 | 1: 圆梦乡村 | 2: 专题系列 | 3: 行业动态');
 
             $table->timestamps();

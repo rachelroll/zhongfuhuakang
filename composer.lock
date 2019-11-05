@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43f532cb068571d77648b6a13f2ba030",
+    "content-hash": "981645db86e7759e082d7e16bd85dde2",
     "packages": [
+        {
+            "name": "ajhaupt7/image-upload-preview",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ajhaupt7/image-upload-preview.git",
+                "reference": "99a98ed2c5b01d16dfabaff503be96e6cbe7d187"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ajhaupt7/image-upload-preview/zipball/99a98ed2c5b01d16dfabaff503be96e6cbe7d187",
+                "reference": "99a98ed2c5b01d16dfabaff503be96e6cbe7d187",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ajhaupt7\\ImageUploadPreview\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ajhaupt7\\ImageUploadPreview\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-08-30T15:48:50+00:00"
+        },
         {
             "name": "aliyuncs/oss-sdk-php",
             "version": "v2.3.0",

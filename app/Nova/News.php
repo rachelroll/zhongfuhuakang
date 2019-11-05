@@ -9,6 +9,8 @@ use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Image;
+use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class News extends Resource
@@ -51,16 +53,18 @@ class News extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('新闻标题','title')->sortable(),
+            Text::make('新闻标题','title')->rules('required'),
             Text::make('记者','author'),
-            Trix::make('新闻正文', 'content')->withFiles('oss'),
+            Text::make('简介','description'),
+            Trix::make('新闻正文', 'content')->withFiles('oss')->rules('required'),
             DateTime::make('发布时间', 'created_at')->hideFromIndex(),
             Select::make('分类', 'type')->options([
                 '0' => '公司新闻',
                 '1' => '圆梦乡村',
                 '2' => '专题系列',
                 '3' => '行业动态',
-            ])->displayUsingLabels()
+            ])->displayUsingLabels()->rules('required'),
+            ImageUploadPreview::make('封面图', 'cover')->disk('oss')->maxWidth(255)
         ];
     }
 

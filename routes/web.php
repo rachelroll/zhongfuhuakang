@@ -30,7 +30,7 @@ Route::get('/hotel', 'BusinessController@hotel')->name('business.hotel'); // 民
 // 新闻资讯
 Route::get('/news-index', 'NewsController@index')->name('news.index'); // 新闻首页
 Route::get('/news-list/{id}', 'NewsController@list')->name('news.list'); // 新闻列表
-Route::get('/news-show/{id}', 'NewsController@show')->name('news.show'); // 新闻列表
+Route::get('/news-show/{id}', 'NewsController@show')->name('news.show'); // 详情页
 
 
 

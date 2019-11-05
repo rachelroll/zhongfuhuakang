@@ -2,10 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/.env" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Console/Kernel.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/AboutController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/BusinessController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/News.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Nova/News.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Nova/User.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/composer.json" charset="UTF-8" />
@@ -13,6 +15,8 @@
     <file url="file://$PROJECT_DIR$/config/filesystems.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/nova.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/database/migrations/2019_11_04_024435_create_news_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2019_11_05_021139_create_nova_pending_trix_attachments_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2019_11_05_021252_create_nova_trix_attachments_table.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/css/customise.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/about/culture.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/about/overview.blade.php" charset="UTF-8" />
@@ -22,6 +26,8 @@
     <file url="file://$PROJECT_DIR$/resources/views/layout/footer.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/header.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/news/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/news/show.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/routes/web.php" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
