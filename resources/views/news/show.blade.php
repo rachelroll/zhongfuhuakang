@@ -6,7 +6,7 @@
     <div class="blank-block"></div>
     <div class="blank-block"></div>
 
-    <div class="container">
+    <div class="container" style="width: 900px;">
         <div class="text-center">
             <h2>{{ $news->title ?? '标题'}}</h2>
             <br>
@@ -14,7 +14,7 @@
         </div>
 
         <div class="blank-block"></div>
-        <div>
+        <div class="font-normal">
             {!! $news->content !!}
         </div>
     </div>
