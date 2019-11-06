@@ -13,6 +13,11 @@
 
     <div class="blank-block"></div>
 
+    <div class="container">
+        <div class="row">
+            div.col
+        </div>
+    </div>
 
 
     <div class="blank-block"></div>
