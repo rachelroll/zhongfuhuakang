@@ -12,6 +12,9 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Image;
 use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
 use Waynestate\Nova\CKEditor;
+use Laravel\Nova\Fields\Boolean;
+use Davidpiesse\NovaToggle\Toggle;
+use MarkRassamni\InlineBoolean\InlineBoolean;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class News extends Resource
@@ -54,7 +57,7 @@ class News extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('新闻标题','title')->rules('required'),
+            Text::make('新闻标题','title')->rules('required', 'title')->updateRules('sometimes'),
             Text::make('记者','author'),
             Text::make('简介','description')->hideFromIndex(),
             //Trix::make('新闻正文', 'content')->withFiles('oss')->rules('required'),
@@ -68,8 +71,18 @@ class News extends Resource
                 '1' => '圆梦乡村',
                 '2' => '专题系列',
                 '3' => '行业动态',
-            ])->displayUsingLabels()->rules('required'),
-            ImageUploadPreview::make('封面图', 'cover')->disk('oss')->maxWidth(255)
+            ])->displayUsingLabels()->rules('required', 'type')->updateRules('sometimes'),
+            ImageUploadPreview::make('封面图', 'cover')->disk('oss')->maxWidth(255),
+
+            InlineBoolean::make('是否推在首页', 'promotion')
+                ->inlineOnIndex()  // Use inline field on the index page
+                ->inlineOnDetail()  // Use inline field on the detail page
+                ->enableMessage('设为推荐新闻成功')  // Toast message when enabling boolean
+                ->disableMessage('设为非推荐新闻成功')  // Toast message when disabling boolean
+                ->trueText('推荐')  // Change the text describing true boolean values
+                ->falseText('非推荐')  // Change the text describing false boolean values
+                ->showTextOnIndex()  // Show true/false text beside the checkbox on the index page
+
         ];
     }
 

@@ -25,7 +25,9 @@ class NewsController extends Controller
     // 新闻列表页
     public function list($id)
     {
-        return view('news.list');
+        $news = News::where('type', $id)->get();
+
+        return view('news.list', compact('news'));
     }
 
     // 详情页
