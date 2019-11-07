@@ -14,7 +14,10 @@ class NewsController extends Controller
         $news = News::all()->groupBy('type');
 
         foreach ($news as $key => &$item) {
-            $item->first = $item->first();
+
+            $promotion = News::where('type', $key)->where('promotion', 1)->first();
+
+            $item->promotion = $promotion;
 
             $item->type = News::NEWS_TYPES[ $key ];
         }
@@ -27,7 +30,9 @@ class NewsController extends Controller
     {
         $news = News::where('type', $id)->get();
 
-        return view('news.list', compact('news'));
+        $promotion = News::where('type', $id)->where('promotion', 1)->first();
+
+        return view('news.list', compact('news', 'promotion'));
     }
 
     // 详情页

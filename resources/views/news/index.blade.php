@@ -23,14 +23,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-3">
-                    <img class="banner" src="/img/new/01-Company profile.jpg" alt="" />
+                    <img class="banner" src="{{ 'http://' .env('CDN_DOMAIN').'/'. $items->promotion->cover }}" alt="" />
                 </div>
                 <div class="col-5">
-                    <h5>{{ $items->first->title }}</h5>
-                    <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($items->first->created_at))->format('Y-m-d') }}</p>
-                    <p>{{ $items->first->description }}</p>
+                    <h5>{{ $items->promotion->title }}</h5>
+                    <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($items->promotion->updated_at))->format('Y-m-d') }}</p>
+                    <p>{{ $items->promotion->description }}</p>
                     <br>
-                    <p><a href="{{ route('news.show', ['id' => $items->first->id]) }}">查看详情</a></p>
+                    <p><a href="{{ route('news.show', ['id' => $items->promotion->id]) }}">查看详情</a></p>
                 </div>
                 <div class="col-4">
                     <ul>
@@ -39,7 +39,7 @@
                                 <div class="row">
                                     <div class="col-4 small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($item->created_at))->format('Y-m-d') }}</div>
                                     <div class="col-8">
-                                        <p><a href="{{ route('news.show', ['id' => $items->first->id]) }}" style="color: #333">{{ $item->title }}</a></p>
+                                        <p><a href="{{ route('news.show', ['id' => $items->promotion->id]) }}" style="color: #333">{{ $item->title }}</a></p>
                                     </div>
                                 </div>
                             </li>

@@ -5,6 +5,11 @@
         ul {
             list-style-type: none;
         }
+
+        a, a:link, a:visited, a:hover, a:active {
+            text-decoration:none;
+            color:#333;
+        }
     </style>
 @endsection
 
@@ -16,17 +21,19 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <div class="row" style="border: 1px solid #eee">
+                <div class="row">
                     <div class="col-4">
                         <img class="banner" src="{{ 'http://' .env('CDN_DOMAIN').'/'. $promotion->cover }}" alt=""/>
                     </div>
                     <div class="col-8">
-                        <h5>标题</h5>
-                        <p class="small-font">2019-10-22</p>
-                        <hr>
-                        <p>
-                            简介简介.....
-                        </p>
+                        <a href="{{ route('news.show', ['id' => $promotion->id]) }}">
+                            <h5>{{ $promotion->title }}</h5>
+                            <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($promotion->updated_at))->format('Y-m-d') }}</p>
+                            <hr>
+                            <p>
+                                {{ $promotion->description }}
+                            </p>
+                        </a>
                     </div>
                 </div>
                 <div class="blank-block"></div>

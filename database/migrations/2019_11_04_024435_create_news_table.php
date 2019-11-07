@@ -22,6 +22,7 @@ class CreateNewsTable extends Migration
             $table->string('time')->default('')->comment('新闻发布时间');
             $table->string('cover')->default('')->comment('封面图');
             $table->tinyInteger('type')->default(0)->comment('新闻分类; 0: 公司新闻 | 1: 圆梦乡村 | 2: 专题系列 | 3: 行业动态');
+            $table->tinyInteger('promotion')->default(0)->comment('是否设为推荐新闻; 0: 非推荐 | 1: 推荐');
 
             $table->timestamps();
         });
