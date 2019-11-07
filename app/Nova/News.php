@@ -57,7 +57,7 @@ class News extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('新闻标题','title')->rules('required', 'title')->updateRules('sometimes'),
+            Text::make('新闻标题','title')->rules('required')->updateRules('sometimes'),
             Text::make('记者','author'),
             Text::make('简介','description')->hideFromIndex(),
             //Trix::make('新闻正文', 'content')->withFiles('oss')->rules('required'),
@@ -71,7 +71,7 @@ class News extends Resource
                 '1' => '圆梦乡村',
                 '2' => '专题系列',
                 '3' => '行业动态',
-            ])->displayUsingLabels()->rules('required', 'type')->updateRules('sometimes'),
+            ])->displayUsingLabels()->rules('required')->updateRules('sometimes'),
             ImageUploadPreview::make('封面图', 'cover')->disk('oss')->maxWidth(255),
 
             InlineBoolean::make('是否推在首页', 'promotion')

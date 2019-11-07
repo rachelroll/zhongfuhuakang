@@ -37,7 +37,7 @@
                         @foreach($items as $item)
                             <li>
                                 <div class="row">
-                                    <div class="col-4 small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($item->created_at))->format('Y-m-d') }}</div>
+                                    <div class="col-4 small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($item->updated_at))->format('Y-m-d') }}</div>
                                     <div class="col-8">
                                         <p><a href="{{ route('news.show', ['id' => $items->promotion->id]) }}" style="color: #333">{{ $item->title }}</a></p>
                                     </div>
