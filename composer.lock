@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce6abccd3faab5a97fda0bd40673896d",
+    "content-hash": "c68415cce708bacce5d31b1050611185",
     "packages": [
         {
             "name": "ajhaupt7/image-upload-preview",
@@ -52,6 +52,54 @@
                 "nova"
             ],
             "time": "2018-08-30T15:48:50+00:00"
+        },
+        {
+            "name": "alfonsobries/nova-froala-editor",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alfonsobries/nova-froala-editor.git",
+                "reference": "584a9de840bcff26cb5f159ff8df436ac903324d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alfonsobries/nova-froala-editor/zipball/584a9de840bcff26cb5f159ff8df436ac903324d",
+                "reference": "584a9de840bcff26cb5f159ff8df436ac903324d",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Vexilo\\NovaFroalaEditor\\NovaFroalaEditorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vexilo\\NovaFroalaEditor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova froala editor field.",
+            "keywords": [
+                "froala",
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-08-25T00:06:09+00:00"
         },
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -935,6 +983,73 @@
                 "trusted proxy"
             ],
             "time": "2019-09-03T16:45:42+00:00"
+        },
+        {
+            "name": "froala/nova-froala-field",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/froala/nova-froala-field.git",
+                "reference": "124dcbce78872c845920fbb36ae4c638fd8a411d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/froala/nova-froala-field/zipball/124dcbce78872c845920fbb36ae4c638fd8a411d",
+                "reference": "124dcbce78872c845920fbb36ae4c638fd8a411d",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "laravel/nova": "*",
+                "league/flysystem": "^1.0.8",
+                "php": ">=7.1.3",
+                "spatie/image-optimizer": "^1.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.1",
+                "orchestra/testbench": "^3.8|^4.0",
+                "phpunit/phpunit": "^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Froala\\NovaFroalaField\\FroalaFieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Froala\\NovaFroalaField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Slava Razum",
+                    "email": "modern.web.artisan@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Nova Froala WYSIWYG Editor Field.",
+            "homepage": "https://github.com/froala/nova-froala-field",
+            "keywords": [
+                "editor",
+                "field",
+                "froala",
+                "laravel",
+                "nova",
+                "wysiwyg"
+            ],
+            "time": "2019-09-06T22:08:09+00:00"
         },
         {
             "name": "jacobcyl/ali-oss-storage",
@@ -2297,6 +2412,62 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "spatie/image-optimizer",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/image-optimizer.git",
+                "reference": "e7527edc984c98ab61db092742856fb15cf71e68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/image-optimizer/zipball/e7527edc984c98ab61db092742856fb15cf71e68",
+                "reference": "e7527edc984c98ab61db092742856fb15cf71e68",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "php": "^7.2",
+                "psr/log": "^1.0",
+                "symfony/process": "^4.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0",
+                "symfony/var-dumper": "^4.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ImageOptimizer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily optimize images using PHP",
+            "homepage": "https://github.com/spatie/image-optimizer",
+            "keywords": [
+                "image-optimizer",
+                "spatie"
+            ],
+            "time": "2019-08-28T14:33:06+00:00"
         },
         {
             "name": "spatie/once",

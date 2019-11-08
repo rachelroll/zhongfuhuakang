@@ -1,5 +1,15 @@
 @extends('layout.layout')
 
+@section('css')
+    <style>
+        .font-normal img {
+            align-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+    </style>
+    @endsection
+
 @section('content')
    @include('news.banner')
 

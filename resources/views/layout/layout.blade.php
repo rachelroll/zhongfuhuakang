@@ -26,7 +26,7 @@
 <div class="container">
     <div class="row justify-content-between" style=" height: 60px; margin-top: 30px">
         <div class="col-auto mr-auto">
-            <img src="" alt=""/>
+            <img style="width: 100%" src="" alt=""/>
         </div>
         <div class="col-auto">
             <ul class="nav nav-pills">
@@ -53,7 +53,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">业务布局</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">业务体系</a>
+                        <a class="dropdown-item" href="{{ route('business.system') }}">业务体系</a>
                         <a class="dropdown-item" href="#">战略布局</a>
                         <a class="dropdown-item" href="#">农业生产</a>
                         <a class="dropdown-item" href="#">乡村旅游观光</a>

@@ -11,11 +11,13 @@ use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Image;
 use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
+use Vexilo\NovaFroalaEditor\NovaFroalaEditor;
 use Waynestate\Nova\CKEditor;
 use Laravel\Nova\Fields\Boolean;
 use Davidpiesse\NovaToggle\Toggle;
 use MarkRassamni\InlineBoolean\InlineBoolean;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Froala\NovaFroalaField\Froala;
 
 class News extends Resource
 {
@@ -60,11 +62,13 @@ class News extends Resource
             Text::make('新闻标题','title')->rules('required')->updateRules('sometimes'),
             Text::make('记者','author'),
             Text::make('简介','description')->hideFromIndex(),
-            //Trix::make('新闻正文', 'content')->withFiles('oss')->rules('required'),
+            //Trix::make('新闻正文', 'content')->withFiles('oss')->rules('required')->updateRules('sometimes'),
+            NovaFroalaEditor::make('content')->options(['width' => 700]),
+            //Froala::make('Content'),
 
-            CKEditor::make('新闻正文', 'content')->options([
-                'height' => 600,
-            ])->hideFromIndex(),
+            //CKEditor::make('新闻正文', 'content')->options([
+            //    'height' => 600,
+            //])->hideFromIndex(),
             DateTime::make('发布时间', 'created_at')->hideFromIndex(),
             Select::make('分类', 'type')->options([
                 '0' => '公司新闻',
