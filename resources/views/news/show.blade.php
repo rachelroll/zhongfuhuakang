@@ -2,11 +2,18 @@
 
 @section('css')
     <style>
-        .font-normal img {
-            align-content: center;
-            align-items: center;
-            margin: 0 auto;
+        .image-style-align-right {
+            text-align: right;
         }
+
+        .image-style-align-center {
+            text-align: center;
+        }
+
+        .image-style-align-left {
+            text-align: left;
+        }
+
     </style>
     @endsection
 

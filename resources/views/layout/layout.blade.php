@@ -44,10 +44,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle"  href="{{ route('news.index') }}" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
                     <div class="dropdown-menu" role="menu">
-                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 1]) }}">公司新闻</a>
-                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 2]) }}">圆梦乡村</a>
-                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 3]) }}">专题系列</a>
-                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 4]) }}">行业动态</a>
+                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 0]) }}">公司新闻</a>
+                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 1]) }}">圆梦乡村</a>
+                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 2]) }}">专题系列</a>
+                        <a class="dropdown-item" href="{{ route('news.list', ['id' => 3]) }}">行业动态</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

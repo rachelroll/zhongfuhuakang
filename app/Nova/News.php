@@ -18,6 +18,12 @@ use Davidpiesse\NovaToggle\Toggle;
 use MarkRassamni\InlineBoolean\InlineBoolean;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Froala\NovaFroalaField\Froala;
+use Advoor\NovaEditorJs\NovaEditorJs;
+use Johnathan\NovaTrumbowyg\NovaTrumbowyg;
+use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
+use NumaxLab\NovaCKEditor5Classic\CKEditor5Classic;
+
+use Illuminate\Support\Facades\Storage;
 
 class News extends Resource
 {
@@ -62,9 +68,43 @@ class News extends Resource
             Text::make('新闻标题','title')->rules('required')->updateRules('sometimes'),
             Text::make('记者','author'),
             Text::make('简介','description')->hideFromIndex(),
+
+
+            //Image::make('cover')
+            //    ->disk('oss')
+            //    ->preview(function ($value, $disk) {
+            //        return $value
+            //            ? Storage::disk($disk)->url($value)
+            //            : null;
+            //    }),
+
             //Trix::make('新闻正文', 'content')->withFiles('oss')->rules('required')->updateRules('sometimes'),
-            NovaFroalaEditor::make('content')->options(['width' => 700]),
-            //Froala::make('Content'),
+            //NovaFroalaEditor::make('新闻正文', 'content')->options(['width' => 700]),
+
+            //NovaTrumbowyg::make('content'),
+
+
+            //NovaTinyMCE::make('content')->options([
+            //    'plugins' => [
+            //        'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            //        'searchreplace wordcount visualblocks visualchars code fullscreen',
+            //        'insertdatetime media nonbreaking save table contextmenu directionality',
+            //        'emoticons template paste textcolor colorpicker textpattern'
+            //    ],
+            //    'toolbar' => 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media',
+            //    'use_lfm' => true
+            //]),
+            //
+            CKEditor5Classic::make('新闻正文', 'Content')->withFiles('oss')->options([
+                'height' => 600,
+                'toolbar' => [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
+            ])->hideFromIndex(),
+
+            //Froala::make('Content')->options([
+            //    'editorClass' => 'custom-class',
+            //    'height' => 300,
+            //]),
+
 
             //CKEditor::make('新闻正文', 'content')->options([
             //    'height' => 600,
@@ -76,7 +116,7 @@ class News extends Resource
                 '2' => '专题系列',
                 '3' => '行业动态',
             ])->displayUsingLabels()->rules('required')->updateRules('sometimes'),
-            ImageUploadPreview::make('封面图', 'cover')->disk('oss')->maxWidth(255),
+            ImageUploadPreview::make('封面图', 'cover')->disk('oss')->maxWidth(255)->creationRules('required')->deletable(false),
 
             InlineBoolean::make('是否推在首页', 'promotion')
                 ->inlineOnIndex()  // Use inline field on the index page
@@ -86,7 +126,6 @@ class News extends Resource
                 ->trueText('推荐')  // Change the text describing true boolean values
                 ->falseText('非推荐')  // Change the text describing false boolean values
                 ->showTextOnIndex()  // Show true/false text beside the checkbox on the index page
-
         ];
     }
 
