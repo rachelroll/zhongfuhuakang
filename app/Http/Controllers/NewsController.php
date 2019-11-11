@@ -31,7 +31,6 @@ class NewsController extends Controller
         $news = News::where('type', $id)->get();
 
         $promotion = News::where('type', $id)->where('promotion', 1)->first();
-
         return view('news.list', compact('news', 'promotion'));
     }
 

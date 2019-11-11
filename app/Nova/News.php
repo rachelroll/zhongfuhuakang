@@ -69,16 +69,8 @@ class News extends Resource
             Text::make('记者','author'),
             Text::make('简介','description')->hideFromIndex(),
 
+            Trix::make('新闻正文', 'content')->withFiles('oss')->rules('required')->updateRules('sometimes'),
 
-            //Image::make('cover')
-            //    ->disk('oss')
-            //    ->preview(function ($value, $disk) {
-            //        return $value
-            //            ? Storage::disk($disk)->url($value)
-            //            : null;
-            //    }),
-
-            //Trix::make('新闻正文', 'content')->withFiles('oss')->rules('required')->updateRules('sometimes'),
             //NovaFroalaEditor::make('新闻正文', 'content')->options(['width' => 700]),
 
             //NovaTrumbowyg::make('content'),
@@ -95,20 +87,14 @@ class News extends Resource
             //    'use_lfm' => true
             //]),
             //
-            CKEditor5Classic::make('新闻正文', 'Content')->withFiles('oss')->options([
-                //'height' => 600,
-                //'toolbar' => [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
-            ])->hideFromIndex(),
-
-            //Froala::make('Content')->options([
-            //    'editorClass' => 'custom-class',
-            //    'height' => 300,
-            //]),
+            //CKEditor5Classic::make('新闻正文', 'Content')->withFiles('oss')->hideFromIndex(),
 
 
             //CKEditor::make('新闻正文', 'content')->options([
             //    'height' => 600,
             //])->hideFromIndex(),
+
+
             DateTime::make('发布时间', 'created_at')->hideFromIndex(),
             Select::make('分类', 'type')->options([
                 '0' => '公司新闻',

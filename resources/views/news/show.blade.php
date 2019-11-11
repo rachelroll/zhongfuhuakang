@@ -6,12 +6,20 @@
             text-align: right;
         }
 
-        .image-style-align-center {
+        .image-style-align-center, .image {
             text-align: center;
         }
 
         .image-style-align-left {
             text-align: left;
+        }
+
+        .attachment, .attachment--preview {
+            text-align: center;
+        }
+
+        .attachment__caption {
+            display: none;
         }
 
     </style>
