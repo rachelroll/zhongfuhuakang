@@ -96,8 +96,8 @@ class News extends Resource
             //]),
             //
             CKEditor5Classic::make('新闻正文', 'Content')->withFiles('oss')->options([
-                'height' => 600,
-                'toolbar' => [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
+                //'height' => 600,
+                //'toolbar' => [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
             ])->hideFromIndex(),
 
             //Froala::make('Content')->options([
