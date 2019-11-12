@@ -70,10 +70,19 @@
             line-height: 30px;
             color: white;
         }
+
+        a, a:link, a:visited, a:hover, a:active {
+            text-decoration:none;
+            color:#333;
+        }
+
+        button.more a, button.more a:link, button.more a:visited, button.more a:hover, button.more a:active {
+            color: #fff;
+        }
     </style>
 @endsection
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding: 0">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -117,16 +126,16 @@
             <div class="col-7">
                 <div class="row">
                     <div class="col-4" style="padding: 0 20px 0 0">
-                        <img src="./img/new/04-Business system-01.jpg" alt="" style="width: 100%;"/>
+                        <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $promotion->cover }}" alt="" style="width: 100%;"/>
                     </div>
                     <div class="col-8">
-                        <div class="title">大生智慧农批云平台再传捷报 中标苏州南环桥新市场电子结算项目</div>
-                        <p>2018-07-11</p>
+                        <div class="title">{{ $promotion->title }}</div>
+                        <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($promotion->updated_at))->format('Y-m-d') }}</p>
                         <p class="content">
-                            日前，继河南万邦、山东银田等项目后，在百亿级农产品交易市场中，大生智慧农批云平台又成功中标江苏苏州南环桥新市场电子结算项…
+                            {{ $promotion->description }}
                         </p>
                         <p>
-                            <a href="">
+                            <a href="{{ route('news.show', ['id' => $promotion->id]) }}">
                                 查看详情
                             </a>
                         </p>
@@ -135,42 +144,22 @@
             </div>
             <div class="col-5">
                 <ul>
-                    <li>
-                        <div class="row">
-                            <div class="col-4">
-                                <p>2018-07-11</p>
+                    @foreach($news as $item)
+                        <li>
+                            <div class="row">
+                                <div class="col-4">
+                                    <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($item->updated_at))->format('Y-m-d') }}</p>
+                                </div>
+                                <div class="col-8">
+                                    <a href="{{ route('news.show', ['id' => $item->id]) }}">
+                                        <p>
+                                            {{ $item->title }}
+                                        </p>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-8">
-                                <p>
-                                    大生智慧农批云平台再传捷报 中标苏州南环桥新市场电子结算项目
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-4">
-                                <p>2018-07-11</p>
-                            </div>
-                            <div class="col-8">
-                                <p>
-                                    大生智慧农批云平台再传捷报 中标苏州南环桥新市场电子结算项目
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-4">
-                                <p>2018-07-11</p>
-                            </div>
-                            <div class="col-8">
-                                <p>
-                                    大生智慧农批云平台再传捷报 中标苏州南环桥新市场电子结算项目
-                                </p>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -179,7 +168,9 @@
     <div class="blank-block"></div>
 
     <div class="container">
-        <div class="more text-center">MORE</div>
+        <button type="button" class="btn btn-primary more btn-block">
+            <a href="{{ route('news.index') }}">MORE</a>
+        </button>
     </div>
 
     <div class="blank-block"></div>

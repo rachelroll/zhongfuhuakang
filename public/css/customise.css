@@ -1,6 +1,6 @@
 .more {
-    border: 1px solid lightgray;
-    padding: 8px 100px;
+    /*border: 1px solid lightgray;*/
+    /*padding: 8px 100px;*/
     width: 400px;
     margin: 0 auto;
 }
@@ -27,3 +27,6 @@ ul {
     text-align: justify;
 }
 
+.title {
+    margin-bottom: 6px;
+}

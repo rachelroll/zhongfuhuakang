@@ -35,7 +35,7 @@
         <div class="text-center">
             <h2>{{ $news->title ?? '标题'}}</h2>
             <br>
-            <p class="small-font">发布时间: {{ \Carbon\Carbon::createFromTimeStamp(strtotime($news->created_at))->format('Y-m-d') }}</p>
+            <p class="small-font">发布时间: {{ \Carbon\Carbon::createFromTimeStamp(strtotime($news->updated_at))->format('Y-m-d') }}</p>
         </div>
 
         <div class="blank-block"></div>
