@@ -182,9 +182,9 @@
                 <div class="swiper-slide">
                     <div class="img-block">
                         <a href="">
-                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                            <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
                         </a>
-                        <div class="mask" style="display: none">
+                        <div class="mask" style="display: none" label = 'overview'>
                             <h5>关于我们</h5>
                             <p>这里是关于我们</p>
                         </div>
@@ -193,18 +193,18 @@
                 <div class="swiper-slide">
                     <div class="img-block">
                         <a href="">
-                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                            <img class="image" src="./img/new/370x290-Business-layout.jpg" alt=""/>
                         </a>
                         <div class="mask" style="display: none">
-                            <h5>关于我们</h5>
-                            <p>这里是关于我们</p>
+                            <h5>业务布局</h5>
+                            <p>这里是业务布局</p>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="img-block">
                         <a href="">
-                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                            <img class="image" src="./img/new/370x290-news.jpg" alt=""/>
                         </a>
                         <div class="mask" style="display: none">
                             <h5>资讯中心</h5>
@@ -256,8 +256,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -373,6 +371,11 @@
                 $(this).children(".mask").show();
             }, function(){
                 $(this).children(".mask").hide();
+            });
+
+            $(".mask").click(function () {
+                var url = $(this).attr('label');
+                window.location.href = "./" + url;
             });
         });
     </script>
