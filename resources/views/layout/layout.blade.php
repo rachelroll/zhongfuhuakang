@@ -24,11 +24,11 @@
 <body>
 
 <div class="container">
-    <div class="row justify-content-between" style=" height: 60px; margin-top: 30px">
+    <div class="row justify-content-between sticky-top" style=" height: 60px; margin-top: 30px">
         <div class="col-auto mr-auto">
-            <img style="width: 100%" src="" alt=""/>
+            <img style="width: 100%" src="/img/new/logo.png" alt=""/>
         </div>
-        <div class="col-auto">
+        <div class="col-auto" style="top: 10px">
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link active" href="{{ route('index') }}">首页</a>
@@ -81,6 +81,7 @@
             </ul>
         </div>
     </div>
+    <br>
 </div>
 
 

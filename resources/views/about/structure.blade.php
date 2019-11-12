@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluit">
-        <img class="banner" src="./img/new/03-corporate culture-1.jpg" alt=""/>
+        <img class="banner" src="/img/new/aboutus-banner.jpg" alt=""/>
     </div>
 
     <div class="blank-block"></div>
@@ -11,7 +11,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('index') }}">主页</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('about.overview') }}">关于公司</a></li>
-                <li class="breadcrumb-item active" aria-current="page">公司概况</li>
+                <li class="breadcrumb-item active" aria-current="page">组织架构</li>
             </ol>
         </nav>
     </div>
