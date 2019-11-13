@@ -10,7 +10,7 @@ class IndexController extends Controller
 
     public function index()
     {
-        $news = News::orderBy('updated_at')->limit(4)->get();
+        $news = News::orderBy('updated_at')->limit(5)->get();
 
         $promotion = News::where('promotion', 1)->first();
 

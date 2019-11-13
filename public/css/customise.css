@@ -3,6 +3,7 @@
     /*padding: 8px 100px;*/
     width: 400px;
     margin: 0 auto;
+    border: 1px solid #AF0E22;
 }
 
 div.blank-block {
@@ -18,15 +19,55 @@ ul {
 }
 
 .small-font {
-    font-size: 14px;
+    font-size: 16px;
     color: #999;
 }
 
 .font-normal {
+    color: #717071;
     font-size: 18px;
     text-align: justify;
+    text-indent:2em;
 }
 
 .title {
     margin-bottom: 6px;
+    font-weight: bold;
+}
+
+a.nav-link {
+    color: #717071;
+    font-size: 18px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #333;
+    background-color: #eee;
+}
+
+.nav-pills .nav-item .nav-link.active {
+    color: #AF0E22;
+    background-color: #fff;
+}
+
+.dropdown-item {
+    color: #717071;
+}
+
+.breadcrumb-item a {
+    color: #666;
+}
+
+.breadcrumb .active {
+    color: #333;
+}
+
+.content-title {
+    color: #343434;
+    font-size: 38px;
+}
+
+.english-title {
+    color: #666;
+    font-size: 22px;
 }

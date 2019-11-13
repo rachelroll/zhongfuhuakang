@@ -3,7 +3,8 @@
 @section('css')
     <style>
         h2 {
-            color: #555;
+            color: #343434;
+            font-size: 38px;
         }
 
         p {
@@ -13,12 +14,16 @@
         .strategy p {
             text-indent: 0
         }
+
+        h5 {
+            color: #343434;
+        }
     </style>
     @endsection
 
 @section('content')
     <div class="container-fluit">
-        <img src="/img/new/bussniesslayout-banner.jpg" alt=""/>
+        <img class="banner" src="/img/new/bussniesslayout-banner.jpg" alt=""/>
     </div>
 
     <div class="blank-block"></div>
@@ -32,15 +37,18 @@
                     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">农业生产</a>
                     <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">乡村旅游观光</a>
 
-                    <a class="nav-link" id="v-pills-ecommerce-tab" data-toggle="pill" href="#v-pills-ecommerce" role="tab" aria-controls="v-pills-ecommerce" aria-selected="false">电子商务+农业</a>
+                    <a class="nav-link" id="v-pills-ecommerce-tab" data-toggle="pill" href="#v-pills-ecommerce" role="tab" aria-controls="v-pills-ecommerce" aria-selected="false">电子商务 + 农业</a>
 
                     <a class="nav-link" id="v-pills-plans-tab" data-toggle="pill" href="#v-pills-plans" role="tab" aria-controls="v-pills-plans" aria-selected="false">规划计划</a>
                     <a class="nav-link" id="v-pills-homestay-tab" data-toggle="pill" href="#v-pills-homestay" role="tab" aria-controls="v-pills-homestay" aria-selected="false">民宿</a>
                 </div>
             </div>
-            <div class="col-9 font-normal">
+            <div class="col-9 font-normal" style="text-indent: 0">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="blank-block"></div>
+                        <div class="text-center"><h2>业务体系</h2></div>
+                        <div class="blank-block"></div>
                         <div class="row">
                             <div class="col-7">
                                 <img class="banner" src="/img/new/04-Business system-01.jpg" alt=""/>

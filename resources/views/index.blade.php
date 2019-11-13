@@ -16,7 +16,7 @@
         }
         .swiper-container {
             width: 100%;
-            height: 300px;
+            height: 240px;
             margin: 20px auto;
         }
         .swiper-slide {
@@ -36,6 +36,7 @@
             -ms-flex-align: center;
             -webkit-align-items: center;
             align-items: center;
+            /*height: 120px;*/
         }
         .append-buttons {
             text-align: center;
@@ -52,13 +53,18 @@
             font-size: 13px;
         }
 
+        .swiper-wrapper {
+            height: 200px;
+        }
+
         .swiper-slide img {
             width: 100%;
+            border-radius: 5px;
         }
 
         .mask {
             position: absolute;
-            top: 50px;
+            top: -2px;
             filter: alpha(opacity=60);
             background-color: #000;
             z-index: 1002;
@@ -76,8 +82,19 @@
             color:#333;
         }
 
-        button.more a, button.more a:link, button.more a:visited, button.more a:hover, button.more a:active {
+        button.more a:visited, button.more a:hover, button.more a:active {
             color: #fff;
+        }
+
+        button.more a, button.more a:link {
+            color: #333;
+        }
+
+        .label {
+            display:block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     </style>
 @endsection
@@ -116,8 +133,8 @@
     <div class="blank-block"></div>
     <div class="container">
         <div>
-            <h3 class="text-center">资讯中心</h3>
-            <p class="text-center font-weight-lighter">NEWS CENTER</p>
+            <h2 class="text-center content-title">资讯中心</h2>
+            <p class="text-center english-title">NEWS CENTER</p>
         </div>
     </div>
     <div class="blank-block"></div>
@@ -129,14 +146,14 @@
                         <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $promotion->cover }}" alt="" style="width: 100%;"/>
                     </div>
                     <div class="col-8">
-                        <div class="title">{{ $promotion->title }}</div>
+                        <div class="title font-normal" style="text-indent: 0; color: #333">{{ $promotion->title }}</div>
                         <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($promotion->updated_at))->format('Y-m-d') }}</p>
-                        <p class="content">
+                        <p class="content font-normal" style="font-size: 17px;">
                             {{ $promotion->description }}
                         </p>
                         <p>
-                            <a href="{{ route('news.show', ['id' => $promotion->id]) }}">
-                                查看详情
+                            <a href="{{ route('news.show', ['id' => $promotion->id]) }}" style="color: #AF0E22">
+                                更多 ......
                             </a>
                         </p>
                     </div>
@@ -146,17 +163,16 @@
                 <ul>
                     @foreach($news as $item)
                         <li>
-                            <div class="row">
-                                <div class="col-4">
-                                    <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($item->updated_at))->format('Y-m-d') }}</p>
-                                </div>
-                                <div class="col-8">
-                                    <a href="{{ route('news.show', ['id' => $item->id]) }}">
-                                        <p>
-                                            {{ $item->title }}
-                                        </p>
-                                    </a>
-                                </div>
+                            <div class="font-normal" style="font-size: 17px;">
+                                <a href="{{ route('news.show', ['id' => $item->id]) }}" class="label">
+                                    <span style="height: 40px; line-height: 40px">
+                                        {{ \Carbon\Carbon::createFromTimeStamp(strtotime($item->updated_at))->format('Y-m-d') }}
+                                    </span>
+                                    &nbsp; &nbsp; &nbsp;
+                                    <span style="height: 40px; line-height: 40px">
+                                        {{ $item->title }}
+                                    </span>
+                                </a>
                             </div>
                         </li>
                     @endforeach
@@ -168,14 +184,15 @@
     <div class="blank-block"></div>
 
     <div class="container">
-        <button type="button" class="btn btn-primary more btn-block">
-            <a href="{{ route('news.index') }}">MORE</a>
+        <button type="button" class="btn more btn-block">
+            <a href="{{ route('news.index') }}" style="color: #AF0E22">MORE</a>
         </button>
     </div>
 
     <div class="blank-block"></div>
+    <div class="blank-block"></div>
 
-    <div class="container" style="background-color: #fff; padding: 40px 0;">
+    <div class="container" style="background-color: #fff; padding: 60px 0;">
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -215,20 +232,9 @@
                 <div class="swiper-slide">
                     <div class="img-block">
                         <a href="">
-                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                            <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
                         </a>
-                        <div class="mask" style="display: none">
-                            <h5>业务布局</h5>
-                            <p>这里是关于我们</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="img-block">
-                        <a href="">
-                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
-                        </a>
-                        <div class="mask" style="display: none">
+                        <div class="mask" style="display: none" label = 'overview'>
                             <h5>关于我们</h5>
                             <p>这里是关于我们</p>
                         </div>
@@ -237,9 +243,9 @@
                 <div class="swiper-slide">
                     <div class="img-block">
                         <a href="">
-                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                            <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
                         </a>
-                        <div class="mask" style="display: none">
+                        <div class="mask" style="display: none" label = 'overview'>
                             <h5>关于我们</h5>
                             <p>这里是关于我们</p>
                         </div>
@@ -248,9 +254,9 @@
                 <div class="swiper-slide">
                     <div class="img-block">
                         <a href="">
-                            <img class="image" src="./img/new/01-Company profile.jpg" alt=""/>
+                            <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
                         </a>
-                        <div class="mask" style="display: none">
+                        <div class="mask" style="display: none" label = 'overview'>
                             <h5>关于我们</h5>
                             <p>这里是关于我们</p>
                         </div>
@@ -269,8 +275,8 @@
 
     <div class="container" style="background-color: #fff; padding: 80px 0 0 0;">
         <div>
-            <h3 class="text-center">合作伙伴</h3>
-            <p class="text-center font-weight-lighter">COOPERATOR PARTNER</p>
+            <h3 class="text-center content-title">合作伙伴</h3>
+            <p class="text-center english-title">COOPERATOR PARTNER</p>
         </div>
 
         <!-- Swiper -->

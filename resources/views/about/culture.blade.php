@@ -31,8 +31,8 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="">
                         <div class="text-center">
-                            <h2>企业理念</h2>
-                            <p>ENTERPRISE CONCEPT</p>
+                            <h2 class="content-title">企业文化</h2>
+                            <p style="color: #343434; font-size: 24px;">ENTERPRISE CONCEPT</p>
                         </div>
                         <br>
                         <br>

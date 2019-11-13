@@ -31,10 +31,10 @@
         <div class="col-auto" style="top: 10px">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('index') }}">首页</a>
+                    <a class="nav-link @if(request()->fullUrl() == route('index')) active @endif" href="{{ route('index') }}">首页</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('about.overview') }}" role="button" aria-haspopup="true" aria-expanded="false">关于我们</a>
+                    <a class="nav-link dropdown-toggle @if(in_array(request()->fullUrl(), [ route('about.overview'), route('about.structure'), route('about.culture') ])) active @endif" href="{{ route('about.overview') }}" role="button" aria-haspopup="true" aria-expanded="false">关于我们</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{ route('about.overview') }}">公司概况</a>
                         <a class="dropdown-item" href="{{ route('about.structure') }}">组织架构</a>
@@ -42,19 +42,19 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('business.system') }}" role="button" aria-haspopup="true" aria-expanded="false">业务布局</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ route('business.system') }}">业务体系</a>
-                        <a class="dropdown-item" href="#">战略布局</a>
-                        <a class="dropdown-item" href="#">农业生产</a>
-                        <a class="dropdown-item" href="#">乡村旅游观光</a>
-                        <a class="dropdown-item" href="#">电子商务+农业</a>
-                        <a class="dropdown-item" href="#">规划计划</a>
-                        <a class="dropdown-item" href="#">民宿</a>
-                    </div>
+                    <a class="nav-link @if(request()->fullUrl() == route('business.system')) active @endif" href="{{ route('business.system') }}" role="button" aria-haspopup="true" aria-expanded="false">业务布局</a>
+{{--                    <div class="dropdown-menu">--}}
+{{--                        <a class="dropdown-item" href="{{ route('business.system') }}">业务体系</a>--}}
+{{--                        <a class="dropdown-item" href="#">战略布局</a>--}}
+{{--                        <a class="dropdown-item" href="#">农业生产</a>--}}
+{{--                        <a class="dropdown-item" href="#">乡村旅游观光</a>--}}
+{{--                        <a class="dropdown-item" href="#">电子商务+农业</a>--}}
+{{--                        <a class="dropdown-item" href="#">规划计划</a>--}}
+{{--                        <a class="dropdown-item" href="#">民宿</a>--}}
+{{--                    </div>--}}
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"  href="{{ route('news.index') }}" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
+                    <a class="nav-link dropdown-toggle @if(in_array(request()->fullUrl(), [ route('news.list', ['id' => 0]), route('news.list', ['id' => 1]), route('news.list', ['id' => 2]), route('news.list', ['id' => 3]) ])) active @endif" href="{{ route('news.index') }}" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
                     <div class="dropdown-menu" role="menu">
                         <a class="dropdown-item" href="{{ route('news.list', ['id' => 0]) }}">公司新闻</a>
                         <a class="dropdown-item" href="{{ route('news.list', ['id' => 1]) }}">圆梦乡村</a>
