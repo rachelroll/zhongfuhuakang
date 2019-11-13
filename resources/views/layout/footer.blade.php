@@ -7,7 +7,7 @@
                 <p style="color: #999; font-size: 16px">地址: 北京市朝阳区大成国际 B 座 0526 室</p>
             </div>
             <div class="col-auto" style="position: absolute; bottom: -240px; right: 0">
-                <p>Copyright © 深圳市大生农业集团有限公司 粤ICP备14063903号</p>
+                <p>Copyright ©北京中福华康农业发展有限公司 粤ICP备14063903号</p>
             </div>
         </div>
     </div>

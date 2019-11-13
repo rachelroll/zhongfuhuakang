@@ -7,7 +7,6 @@
     <!-- Demo styles -->
     <style>
         body {
-            background: #eee;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             /*font-size: 14px;*/
             color:#000;
@@ -62,6 +61,10 @@
             border-radius: 5px;
         }
 
+        :root {
+            --swiper-theme-color: #AF0E22;
+        }
+
         .mask {
             position: absolute;
             top: -2px;
@@ -88,13 +91,6 @@
 
         button.more a, button.more a:link {
             color: #333;
-        }
-
-        .label {
-            display:block;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
     </style>
 @endsection
@@ -142,10 +138,10 @@
         <div class="row">
             <div class="col-7">
                 <div class="row">
-                    <div class="col-4" style="padding: 0 20px 0 0">
+                    <div class="col-5" style="padding: 0 20px 0 0">
                         <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $promotion->cover }}" alt="" style="width: 100%;"/>
                     </div>
-                    <div class="col-8">
+                    <div class="col-7">
                         <div class="title font-normal" style="text-indent: 0; color: #333">{{ $promotion->title }}</div>
                         <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($promotion->updated_at))->format('Y-m-d') }}</p>
                         <p class="content font-normal" style="font-size: 17px;">

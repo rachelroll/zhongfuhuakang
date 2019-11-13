@@ -54,7 +54,7 @@
 {{--                    </div>--}}
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle @if(in_array(request()->fullUrl(), [ route('news.list', ['id' => 0]), route('news.list', ['id' => 1]), route('news.list', ['id' => 2]), route('news.list', ['id' => 3]) ])) active @endif" href="{{ route('news.index') }}" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
+                    <a class="nav-link dropdown-toggle @if(in_array(request()->fullUrl(), [ route('news.list', ['id' => 0]), route('news.list', ['id' => 1]), route('news.list', ['id' => 2]), route('news.list', ['id' => 3]), route('news.index') ])) active @endif" href="{{ route('news.index') }}" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
                     <div class="dropdown-menu" role="menu">
                         <a class="dropdown-item" href="{{ route('news.list', ['id' => 0]) }}">公司新闻</a>
                         <a class="dropdown-item" href="{{ route('news.list', ['id' => 1]) }}">圆梦乡村</a>

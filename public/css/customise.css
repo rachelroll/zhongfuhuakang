@@ -50,6 +50,13 @@ a.nav-link {
     background-color: #fff;
 }
 
+.label {
+    display:block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .dropdown-item {
     color: #717071;
 }
@@ -70,4 +77,9 @@ a.nav-link {
 .english-title {
     color: #666;
     font-size: 22px;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration:none;
+    color:#333;
 }
