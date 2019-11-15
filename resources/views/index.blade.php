@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
     <!-- Demo styles -->
-    <style>
+<style>
         body {
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             /*font-size: 14px;*/
@@ -53,7 +53,7 @@
         }
 
         .swiper-wrapper {
-            height: 200px;
+            height: 206px;
         }
 
         .swiper-slide img {
@@ -67,17 +67,18 @@
 
         .mask {
             position: absolute;
-            top: -2px;
+            top: 0;
             filter: alpha(opacity=60);
             background-color: #000;
             z-index: 1002;
             left: 0;
             opacity:0.6;
             -moz-opacity:0.5;
-            padding: 80px 16px 16px;
-            font-size: 16px;
+            padding: 100px 16px 16px;
+            font-size: 20px;
             line-height: 30px;
-            color: white;
+            color: #fff;
+            border-radius: 5px;
         }
 
         a, a:link, a:visited, a:hover, a:active {
@@ -136,12 +137,12 @@
     <div class="blank-block"></div>
     <div class="container">
         <div class="row">
-            <div class="col-7">
+            <div class="col col-lg-7">
                 <div class="row">
-                    <div class="col-5" style="padding: 0 20px 0 0">
+                    <div class="col-12 col-lg-5">
                         <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $promotion->cover }}" alt="" style="width: 100%;"/>
                     </div>
-                    <div class="col-7">
+                    <div class="col-12 col-lg-7">
                         <div class="title font-normal" style="text-indent: 0; color: #333">{{ $promotion->title }}</div>
                         <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($promotion->updated_at))->format('Y-m-d') }}</p>
                         <p class="content font-normal" style="font-size: 17px;">
@@ -149,14 +150,14 @@
                         </p>
                         <p>
                             <a href="{{ route('news.show', ['id' => $promotion->id]) }}" style="color: #AF0E22">
-                                更多 ......
+                                更多 ...
                             </a>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-5">
-                <ul>
+            <div class="col col-lg-5">
+                <ul style="padding-left: 0px">
                     @foreach($news as $item)
                         <li>
                             <div class="font-normal" style="font-size: 17px;">
@@ -185,10 +186,9 @@
         </button>
     </div>
 
-    <div class="blank-block"></div>
-    <div class="blank-block"></div>
+{{--     --}}
 
-    <div class="container" style="background-color: #fff; padding: 60px 0;">
+    <div class="container" style="padding: 60px 0;">
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -199,7 +199,6 @@
                         </a>
                         <div class="mask" style="display: none" label = 'overview'>
                             <h5>关于我们</h5>
-                            <p>这里是关于我们</p>
                         </div>
                     </div>
                 </div>
@@ -210,7 +209,6 @@
                         </a>
                         <div class="mask" style="display: none">
                             <h5>业务布局</h5>
-                            <p>这里是业务布局</p>
                         </div>
                     </div>
                 </div>
@@ -221,7 +219,6 @@
                         </a>
                         <div class="mask" style="display: none">
                             <h5>资讯中心</h5>
-                            <p>这里是关于我们</p>
                         </div>
                     </div>
                 </div>
@@ -232,7 +229,6 @@
                         </a>
                         <div class="mask" style="display: none" label = 'overview'>
                             <h5>关于我们</h5>
-                            <p>这里是关于我们</p>
                         </div>
                     </div>
                 </div>
@@ -243,7 +239,6 @@
                         </a>
                         <div class="mask" style="display: none" label = 'overview'>
                             <h5>关于我们</h5>
-                            <p>这里是关于我们</p>
                         </div>
                     </div>
                 </div>
@@ -254,25 +249,24 @@
                         </a>
                         <div class="mask" style="display: none" label = 'overview'>
                             <h5>关于我们</h5>
-                            <p>这里是关于我们</p>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
-            {{--            <div class="swiper-button-next"></div>--}}
-            {{--            <div class="swiper-button-prev"></div>--}}
+{{--            <div class="swiper-pagination"></div>--}}
+        <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 
-    <div class="blank-block"></div>
+{{--    <div class="blank-block"></div>--}}
 
-    <div class="container" style="background-color: #fff; padding: 80px 0 0 0;">
+    <div class="container" style="background-color: #fff; padding: 0;">
         <div>
-            <h3 class="text-center content-title">合作伙伴</h3>
-            <p class="text-center english-title">COOPERATOR PARTNER</p>
+            <h3 class="text-center content-title">商务合作</h3>
+            <p class="text-center english-title">BUSINESS COOPERATOR</p>
         </div>
 
         <!-- Swiper -->
@@ -280,32 +274,37 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="http://www.dsgd.co/Upload/%E5%8C%97%E4%BA%AC%E9%A6%96%E5%86%9C1-11171468689.jpg" alt=""/>
+                        <img src="/img/new/zhongfuxianglv.png" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="http://www.dsgd.co/Upload/link1-11191440673.jpg" alt=""/>
+                        <img src="/img/new/yuanmengxiangcun.png" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="http://www.dsgd.co/Upload/link1-11191440673.jpg" alt=""/>
+                        <img src="/img/new/tuancan.png" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="http://www.dsgd.co/Upload/link1-11191440673.jpg" alt=""/>
+                        <img src="/img/new/jiaheyangguanglogo.jpg" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="http://www.dsgd.co/Upload/link1-11191440673.jpg" alt=""/>
+                        <img src="/img/new/meinuologo.jpg" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="http://www.dsgd.co/Upload/link1-11191440673.jpg" alt=""/>
+                        <img src="/img/new/nongjilogo.jpg" alt=""/>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="/img/new/bangdelogo.jpg" alt=""/>
                     </a>
                 </div>
             </div>

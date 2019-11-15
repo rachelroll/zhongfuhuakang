@@ -8,7 +8,7 @@
         }
 
         p {
-            text-indent:2em
+            text-indent: 0;
         }
 
         .strategy p {
@@ -30,7 +30,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-md-3 col-12">
                 <div class="nav flex-column nav-pills sticky-top" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">业务体系</a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">战略布局</a>
@@ -43,59 +43,93 @@
                     <a class="nav-link" id="v-pills-homestay-tab" data-toggle="pill" href="#v-pills-homestay" role="tab" aria-controls="v-pills-homestay" aria-selected="false">民宿</a>
                 </div>
             </div>
-            <div class="col-9 font-normal" style="text-indent: 0">
+            <div class="col-md-9 col-12 font-normal" style="text-indent: 0">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <div class="blank-block"></div>
-                        <div class="text-center"><h2>业务体系</h2></div>
+                        <div class="text-center">
+                            <h2 class="tite-with-decoration">业务体系</h2>
+                            <span class="title-decoration"></span>
+                        </div>
                         <div class="blank-block"></div>
+                        <div class="special-title">
+                            <div class="float-title-left">
+                                <p>聚焦农业</p>
+                                <span></span>
+                            </div>
+                            <div class="english-title">Focus agriculture</div>
+                        </div>
                         <div class="row">
-                            <div class="col-7">
+                            <div class="col-md-7 col-12">
                                 <img class="banner" src="/img/new/04-Business system-01.jpg" alt=""/>
                             </div>
-                            <div class="col-5">
+                            <div class="col-md-5 col-12">
                                 <p>
-                                    北京中福华康农业开发有限公司定位于综合性农业开发企业，一方面投资经营农业、农资领域的龙头企业，致力于农业全产业链的要素资源整合和农业高附加值优质项目的资本运作，通过整合、流动和优化配置，达到投入产出的效益最大化；同时，自身又直接参与各级政府主导的农业开发项目，获得区域发展带来的综合效益。在总体运营上，公司追求“所属企业资本增值”和“特色农业区产业发展”的双重目标。
+                                    北京中福华康农业开发有限公司定位于综合性农业开发企业，一方面投资经营农业、农资领域的龙头企业，致力于农业全产业链的要素资源整合和农业高附加值优质项目的资本运作，通过整合、流动和优化配置，达到投入产出的效益最大化；同时，自身又直接参与各级政府主导的农业开发项目，获得区域发展带来的综合效益。
                                 </p>
                             </div>
                         </div>
                         <div class="blank-block"></div>
+                        <div class="special-title-right">
+                            <div class="float-title-right" style="right: 290px">
+                                <p>区域发展</p>
+                                <span></span>
+                            </div>
+                            <div class="english-title">Regional development</div>
+                        </div>
                         <div class="row">
-                            <div class="col-5">
+                            <div class="col-md-5 col-12">
                                 <p>
-                                    公司将围绕区域农业开发项目展开资产管理、生产经营和资本运作以土地成片开发为基础，充分利用项目业务板块间的关联性，进行协同运作和专业化管理，完成项目建设与运营（典型描述是农业部推进农业供给侧结构性改革的“五区一园四平台”，五区是国家现代农业示范区、粮食生产功能区、重要农产品生产保护区、特色农产品优势区、农业可持续发展试验示范区。一园是现代农业产业园。四平台是农产品质量安全追溯平台、农兽药基础数据平台、重点农产品市场信息平台、新型农业经营主体信息直报平台。）同时公司作为项目经营主体和资源配置平台，可以有效串联起下属独立经营的产业链内子分公司，将区域发展赋予的使命和任务分配至各业务板块，实现“资源-资产-资本”盈利增长。
+                                    公司围绕区域农业开发项目展开资产管理、生产经营和资本运作以土地成片开发为基础，充分利用项目业务板块间的关联性，进行协同运作和专业化管理，完成项目建设与运营。同时作为项目经营主体和资源配置平台，有效串联下属独立经营的产业链内子分公司，将区域发展赋予的使命和任务分配至各业务板块，实现“资源-资产-资本”盈利增长。
                                 </p>
                             </div>
-                            <div class="col-7">
+                            <div class="col-md-7 col-12">
                                 <img class="banner" src="/img/new/04-Business system-02.jpg" alt=""/>
                             </div>
                         </div>
                         <div class="blank-block"></div>
+                        <div class="special-title">
+                            <div class="float-title-left">
+                                <p>农业基地</p>
+                                <span></span>
+                            </div>
+                            <div class="english-title">Agricultural base</div>
+                        </div>
                         <div class="row">
-                            <div class="col-7">
+                            <div class="col-md-7 col-12">
                                 <img class="banner" src="/img/new/04-Business system-03.jpg" alt=""/>
                             </div>
-                            <div class="col-5">
+                            <div class="col-md-5 col-12">
                                 <p>
                                     公司将建立众多的国内外农业基地，伴随基地农产品种类多样，基于农业标准化、市场化、品牌化、产业化的核心运营模式生产的农产品种类将越来越丰富，同时着力推动解决一定区域内农业产业一体化进程，将区域品牌、产品品牌、国家“三品一标”战略和 “食品安全”战略紧密结合，打造一系列优质农资产品。
                                 </p>
                             </div>
                         </div>
                         <div class="blank-block"></div>
+                        <div class="special-title-right">
+                            <div class="float-title-right">
+                                <p>资本运作</p>
+                                <span></span>
+                            </div>
+                            <div class="english-title">Capital operation</div>
+                        </div>
                         <div class="row">
-                            <div class="col-5">
+                            <div class="col-md-5 col-12">
                                 <p>
                                     企业投资运营方面，公司着力培育特色农企、潜力农企、拟上市公司，培育行业龙头企业，全面实施以品牌为核心，产业投资、渠道整合、品牌建设和金融服务四轮驱动的整体发展战略，整合社会资源，聚集政府资本、金融资本、社会资金，聚集市场规模、人才、科技，推动农业龙头企业的建设和发展，用科技和金融带动现代农业、农资全产业链的高效、安全和可持续发展。
                                 </p>
                             </div>
-                            <div class="col-7">
+                            <div class="col-md-7 col-12">
                                 <img class="banner" src="/img/new/04-Business system-04.jpg" alt=""/>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                         <div class="blank-block"></div>
-                        <div class="text-center"><h2>战略布局</h2></div>
+                        <div class="text-center">
+                            <h2 class="tite-with-decoration">战略布局</h2>
+                            <span class="title-decoration"></span>
+                        </div>
                         <div class="blank-block"></div>
                         <div>
                             <img class="banner" src="/img/new/05-Strategic layout.jpg" alt=""/>
@@ -151,7 +185,10 @@
 
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                         <div class="blank-block"></div>
-                        <div class="text-center"><h2>农业生产</h2></div>
+                        <div class="text-center">
+                            <h2 class="tite-with-decoration">农业生产</h2>
+                            <span class="title-decoration"></span>
+                        </div>
                         <div class="blank-block"></div>
                         <div>
                             <img class="banner" src="/img/new/06-agricultural-production.jpg" alt=""/>
@@ -164,7 +201,10 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                         <div class="blank-block"></div>
-                        <div class="text-center"><h2>乡村旅游观光</h2></div>
+                        <div class="text-center">
+                            <h2 class="tite-with-decoration">乡村旅游观光</h2>
+                            <span class="title-decoration"></span>
+                        </div>
                         <div class="blank-block"></div>
                         <div>
                             <img class="banner" src="/img/new/07-Agricultural-Tourism.jpg" alt=""/>
@@ -177,7 +217,10 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-ecommerce" role="tabpanel" aria-labelledby="v-pills-ecommerce-tab">
                         <div class="blank-block"></div>
-                        <div class="text-center"><h2>电子商务 + 农业</h2></div>
+                        <div class="text-center">
+                            <h2 class="tite-with-decoration">电子商务 + 农业</h2>
+                            <span class="title-decoration"></span>
+                        </div>
                         <div class="blank-block"></div>
                         <div>
                             <img class="banner" src="/img/new/08-E-commerce-agriculture.jpg" alt=""/>
@@ -188,10 +231,12 @@
                             <p>以品牌建设为驱动，全面建立农产品育种开发、生产种植、物流运营、电子商务及金融服务体系，着力塑造“健康农业、放心食品、安心服务”的产品品牌形象。联合政府创办农业论坛，促进农业科研和理论创新，增强品牌核心竞争力。</p>
                         </div>
                     </div>
-
                     <div class="tab-pane fade" id="v-pills-plans" role="tabpanel" aria-labelledby="v-pills-plans-tab">
                         <div class="blank-block"></div>
-                        <div class="text-center"><h2>2017 - 2025年战略规划</h2></div>
+                        <div class="text-center">
+                            <h2 class="tite-with-decoration">2017 - 2025年战略规划</h2>
+                            <span class="title-decoration"></span>
+                        </div>
                         <div class="blank-block"></div>
 
                         <ul class="nav nav-tabs sticky-top" style="background-color: #fff;" id="myTab" role="tablist">
@@ -292,7 +337,10 @@
                     </div>
                     <div class="tab-pane fade" id="v-pills-homestay" role="tabpanel" aria-labelledby="v-pills-homestay-tab">
                         <div class="blank-block"></div>
-                        <div class="text-center"><h2>民宿</h2></div>
+                        <div class="text-center">
+                            <h2 class="tite-with-decoration">民宿</h2>
+                            <span class="title-decoration"></span>
+                        </div>
                         <div class="blank-block"></div>
                         <div>
                             <img class="banner" src="/img/new/10-Homestay.jpg" alt=""/>
