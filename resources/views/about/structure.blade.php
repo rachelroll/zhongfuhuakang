@@ -31,8 +31,9 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="">
                         <div class="text-center">
-                            <h2 class="content-title">组织架构</h2>
-                            <p style="color: #343434; font-size: 24px;">STRUCTURE</p>
+                            <h2 class="content-title tite-with-decoration">组织架构</h2>
+                            <span class="title-decoration"></span>
+{{--                            <p style="color: #343434; font-size: 24px;">STRUCTURE</p>--}}
                         </div>
                         <img class="banner" src="/img/new/02A-rchitecture diagram.jpg" alt=""/>
                     </div>

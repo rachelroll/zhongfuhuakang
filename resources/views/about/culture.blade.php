@@ -31,8 +31,9 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="">
                         <div class="text-center">
-                            <h2 class="content-title">企业文化</h2>
-                            <p style="color: #343434; font-size: 24px;">ENTERPRISE CONCEPT</p>
+                            <h2 class="content-title tite-with-decoration">企业文化</h2>
+                            <span class="title-decoration"></span>
+{{--                            <p style="color: #343434; font-size: 24px;">ENTERPRISE CONCEPT</p>--}}
                         </div>
                         <br>
                         <br>

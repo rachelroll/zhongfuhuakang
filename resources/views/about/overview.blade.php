@@ -31,7 +31,8 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active font-normal" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <div class="text-center">
-                            <h2 class="content-title">北京中福华康农业开发有限公司</h2>
+                            <h2 class="content-title tite-with-decoration">北京中福华康农业开发有限公司</h2>
+                            <span class="title-decoration"></span>
                         </div>
                         <div class="blank-block"></div>
                         <p>

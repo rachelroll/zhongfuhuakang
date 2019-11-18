@@ -57,7 +57,7 @@
                                 <p>聚焦农业</p>
                                 <span></span>
                             </div>
-                            <div class="english-title">Focus agriculture</div>
+                            <div class="business-english-title">Focus agriculture</div>
                         </div>
                         <div class="row">
                             <div class="col-md-7 col-12">
@@ -75,7 +75,7 @@
                                 <p>区域发展</p>
                                 <span></span>
                             </div>
-                            <div class="english-title">Regional development</div>
+                            <div class="business-english-title">Regional development</div>
                         </div>
                         <div class="row">
                             <div class="col-md-5 col-12">
@@ -93,7 +93,7 @@
                                 <p>农业基地</p>
                                 <span></span>
                             </div>
-                            <div class="english-title">Agricultural base</div>
+                            <div class="business-english-title">Agricultural base</div>
                         </div>
                         <div class="row">
                             <div class="col-md-7 col-12">
@@ -111,7 +111,7 @@
                                 <p>资本运作</p>
                                 <span></span>
                             </div>
-                            <div class="english-title">Capital operation</div>
+                            <div class="business-english-title">Capital operation</div>
                         </div>
                         <div class="row">
                             <div class="col-md-5 col-12">
