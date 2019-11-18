@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-between sticky-top" style=" height: 60px; margin-top: 30px">
             <div class="col-xs-auto mr-auto">
-                <img style="width: 100%" src="/img/new/logo.png" alt=""/>
+                <img style="width: 80%" src="/img/new/logo.png" alt=""/>
             </div>
             <div class="col-xs-auto" style="top: 10px">
                 <ul class="nav nav-pills">
