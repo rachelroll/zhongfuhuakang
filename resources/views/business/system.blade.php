@@ -71,7 +71,7 @@
                         </div>
                         <div class="blank-block"></div>
                         <div class="special-title-right">
-                            <div class="float-title-right" style="right: 290px">
+                            <div class="float-title-right" style="right: 270px">
                                 <p>区域发展</p>
                                 <span></span>
                             </div>
