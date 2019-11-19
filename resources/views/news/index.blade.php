@@ -26,17 +26,17 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-3">
+                <div class="col-12 col-3">
                     <img class="banner" src="{{ 'http://' .env('CDN_DOMAIN').'/'. $items->promotion->cover }}" alt="" />
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-4">
                     <h5>{{ $items->promotion->title }}</h5>
                     <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($items->promotion->updated_at))->format('Y-m-d') }}</p>
                     <p>{{ $items->promotion->description }}</p>
                     <br>
 {{--                    <p><a href="{{ route('news.show', ['id' => $items->promotion->id]) }}">查看详情</a></p>--}}
                 </div>
-                <div class="col-5">
+                <div class="col-12 col-5">
                     <ul>
                         @foreach($items as $item)
                             <li>
@@ -69,9 +69,5 @@
         <div class="blank-block"></div>
     @endforeach
 
-
     <div class="blank-block"></div>
-
-
-
 @stop

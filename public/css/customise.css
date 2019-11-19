@@ -71,7 +71,14 @@ li.breadcrumb-item a, a:link, a:visited {
 
 .content-title {
     color: #343434;
-    font-size: 38px;
+    font-size: 24px;
+    text-indent: 0em;
+}
+
+@media (min-width: 1200px) {
+    .content-title {
+        font-size: 38px;
+    }
 }
 
 .english-title {
@@ -330,5 +337,64 @@ a, a:link, a:visited, a:hover, a:active {
 a.dropdown-item:hover, .dropdown-item:focus {
     color: #16181b;
     text-decoration: none;
+    background-color: #AF0E22;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 70px;
+    margin: 20px auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /*height: 120px;*/
+}
+.append-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+.append-buttons a {
+    display: inline-block;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+.swiper-wrapper {
+    height: 70px;
+    width: 26%!important;
+}
+
+/*.swiper-slide img {*/
+/*    width: 100%;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+:root {
+    --swiper-theme-color: #AF0E22;
+}
+
+.active_nav {
+    width: 76px;
+    height: 2px;
     background-color: #AF0E22;
 }

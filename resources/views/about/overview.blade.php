@@ -16,17 +16,13 @@
         </nav>
     </div>
 
+    @if(Agent::isDesktop())
     <div class="blank-block"></div>
+    @endif
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-12">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-home-tab" href="{{ route('about.overview') }}" role="tab" aria-selected="false">公司概况</a>
-                    <a class="nav-link" id="v-pills-profile-tab" href="{{ route('about.structure') }}" role="tab" aria-selected="false">组织架构</a>
-                    <a class="nav-link" id="v-pills-messages-tab" href="{{ route('about.culture') }}" role="tab" aria-selected="false">企业文化</a>
-                </div>
-            </div>
+            @include('about.nav')
             <div class="col-md-9 col-12">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active font-normal" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -48,24 +44,6 @@
                         <br>
                         <img class="banner" src="/img/new/01-Company profile.jpg" alt=""/>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                        <div class="text-center">
-                            <h2>组织架构</h2>
-                            <p>STRUCTURE</p>
-                        </div>
-                        <img class="banner" src="/img/new/02A-rchitecture diagram.jpg" alt=""/>
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                        <div class="text-center">
-                            <h2>企业理念</h2>
-                            <p>ENTERPRISE CONCEPT</p>
-                        </div>
-                        <br>
-                        <br>
-                        <img class="banner" src="/img/new/03-corporate culture-1.jpg" alt=""/>
-                        <div class="blank-block"></div>
-                        <img class="banner" src="/img/new/03-corporate culture-2.jpg" alt=""/>
-                    </div>
                 </div>
             </div>
         </div>
@@ -75,3 +53,6 @@
     <div class="blank-block"></div>
 
     @stop
+
+
+

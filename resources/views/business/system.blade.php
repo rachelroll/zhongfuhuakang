@@ -18,8 +18,151 @@
         h5 {
             color: #343434;
         }
+
+        .wrap-iconic-case .text-image-row div.single-image {
+            background-color: #ddd;
+            padding: 32px;
+            margin-right: 30px;
+        }
+
+
+        ul.nav {
+            background-color: #333;
+            overflow: auto;
+            /*white-space: nowrap;*/
+        }
+
+        li.nav-item {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+
+        div.scrollmenu {
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        div.scrollmenu div {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        div.scrollmenu div:hover {
+            background-color: #777;
+        }
+        /* clear float */
+        .clear:after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0
+        }
+
+        .clear {
+            zoom: 1
+
+        }
+        /* end clear float */
+        .swiper-container .swiper-wrapper {
+            position: relative;
+        }
+        .swiper-container .swiper-wrapper .swiper-slide {
+            /*border: 1px solid red;*/
+            /*text-align: center;*/
+            padding: 6px 0;
+        }
+        .child {
+            display: none;
+            /*position: absolute;*/
+            /*z-index:999;*/
+            /*top: 100px;*/
+            width: 100%;
+            font-weight: normal;
+            /*padding: 10px;*/
+            font-size: 18px;
+            color: #666;
+        }
+        .child li {
+            line-height: 60px;
+            border-bottom: solid 1px #8a8a8a;
+
+        }
+        .parent {
+            font-size: 18px;
+            color: #666;
+
+        }
+
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+
+        .horizontal-container {
+            margin: 0 auto;
+            /*background-color: #f4ffe3;*/
+            width: 100%;
+            position: relative;
+            /*border: 1px solid #e0ebcf;*/
+        }
+        .scroll-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-wrapper{
+            margin: 0 auto;
+            /* overflow: hidden; */
+            border-radius: 5px;
+            overflow-x: auto;
+            -webkit-backface-visibility: hidden;
+            -webkit-overflow-scrolling: touch; /* 2 */
+        }
+        .scroll-content {
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .scroll-item {
+            height: 48px;
+            font-size: 24px;
+            line-height: 48px;
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        .dropdown {
+            display: none;
+            width: 100%;
+            padding: 0 10px;
+            font-weight: normal;
+            font-size: 20px;
+            color: #666;
+        }
+        .dropdown li {
+            line-height: 60px;
+            border-bottom: solid 1px #8a8a8a;
+        }
+
+        .text-red {
+            color: black;
+            font-weight: bold;
+            background-image: url(../img/red-back.png);
+        }
+
+        .h5, h5 {
+            font-size: 1.1rem;
+        }
     </style>
-    @endsection
+@endsection
 
 @section('content')
     <div class="container-fluit">
@@ -30,25 +173,54 @@
 
     <div class="container">
         <div class="row">
+            @if (Agent::isDesktop() )
             <div class="col-md-3 col-12">
                 <div class="nav flex-column nav-pills sticky-top" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">业务体系</a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">战略布局</a>
                     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">农业生产</a>
                     <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">乡村旅游观光</a>
-
                     <a class="nav-link" id="v-pills-ecommerce-tab" data-toggle="pill" href="#v-pills-ecommerce" role="tab" aria-controls="v-pills-ecommerce" aria-selected="false">电子商务 + 农业</a>
-
                     <a class="nav-link" id="v-pills-plans-tab" data-toggle="pill" href="#v-pills-plans" role="tab" aria-controls="v-pills-plans" aria-selected="false">规划计划</a>
                     <a class="nav-link" id="v-pills-homestay-tab" data-toggle="pill" href="#v-pills-homestay" role="tab" aria-controls="v-pills-homestay" aria-selected="false">民宿</a>
                 </div>
             </div>
+            @else
+                {{--                这里是滑动导航--}}
+                <div class="horizontal-container">
+                    <div class="scroll-wrapper" ref="scroll">
+                        <div class="scroll-content">
+                            <div class="scroll-item">
+                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">业务体系</a>
+                            </div>
+                            <div class="scroll-item">
+                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">战略布局</a>
+                            </div>
+                            <div class="scroll-item">
+                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">农业生产</a>
+                            </div>
+                            <div class="scroll-item">
+                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">乡村旅游观光</a>
+                            </div>
+                            <div class="scroll-item">
+                                <a class="nav-link" id="v-pills-ecommerce-tab" data-toggle="pill" href="#v-pills-ecommerce" role="tab" aria-controls="v-pills-ecommerce" aria-selected="false">电子商务 + 农业</a>
+                            </div>
+                            <div class="scroll-item">
+                                <a class="nav-link" id="v-pills-plans-tab" data-toggle="pill" href="#v-pills-plans" role="tab" aria-controls="v-pills-plans" aria-selected="false">规划计划</a>
+                            </div>
+                            <div class="scroll-item">
+                                <a class="nav-link" id="v-pills-homestay-tab" data-toggle="pill" href="#v-pills-homestay" role="tab" aria-controls="v-pills-homestay" aria-selected="false">民宿</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
             <div class="col-md-9 col-12 font-normal" style="text-indent: 0">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
-                            <h2 class="tite-with-decoration">业务体系</h2>
+                            <h2 class="content-title tite-with-decoration">业务体系</h2>
                             <span class="title-decoration"></span>
                         </div>
                         <div class="blank-block"></div>
@@ -127,7 +299,7 @@
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
-                            <h2 class="tite-with-decoration">战略布局</h2>
+                            <h2 class="content-title tite-with-decoration">战略布局</h2>
                             <span class="title-decoration"></span>
                         </div>
                         <div class="blank-block"></div>
@@ -186,7 +358,7 @@
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
-                            <h2 class="tite-with-decoration">农业生产</h2>
+                            <h2 class="content-title tite-with-decoration">农业生产</h2>
                             <span class="title-decoration"></span>
                         </div>
                         <div class="blank-block"></div>
@@ -202,7 +374,7 @@
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
-                            <h2 class="tite-with-decoration">乡村旅游观光</h2>
+                            <h2 class="content-title tite-with-decoration">乡村旅游观光</h2>
                             <span class="title-decoration"></span>
                         </div>
                         <div class="blank-block"></div>
@@ -218,7 +390,7 @@
                     <div class="tab-pane fade" id="v-pills-ecommerce" role="tabpanel" aria-labelledby="v-pills-ecommerce-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
-                            <h2 class="tite-with-decoration">电子商务 + 农业</h2>
+                            <h2 class="content-title tite-with-decoration">电子商务 + 农业</h2>
                             <span class="title-decoration"></span>
                         </div>
                         <div class="blank-block"></div>
@@ -234,7 +406,7 @@
                     <div class="tab-pane fade" id="v-pills-plans" role="tabpanel" aria-labelledby="v-pills-plans-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
-                            <h2 class="tite-with-decoration">2017 - 2025年战略规划</h2>
+                            <h2 class="content-title tite-with-decoration">2017 - 2025年战略规划</h2>
                             <span class="title-decoration"></span>
                         </div>
                         <div class="blank-block"></div>
@@ -338,7 +510,7 @@
                     <div class="tab-pane fade" id="v-pills-homestay" role="tabpanel" aria-labelledby="v-pills-homestay-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
-                            <h2 class="tite-with-decoration">民宿</h2>
+                            <h2 class="content-title tite-with-decoration">民宿</h2>
                             <span class="title-decoration"></span>
                         </div>
                         <div class="blank-block"></div>
@@ -354,10 +526,20 @@
             </div>
         </div>
     </div>
-
-
-
     <div class="blank-block"></div>
     <div class="blank-block"></div>
-
 @stop
+
+@section('script')
+    <script src="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/script/bscroll.min.js"></script>
+    <script>
+        window.onload = function () {
+            let wrapper = document.querySelector('.scroll-wrapper')
+            let scroll = new BScroll(wrapper, {
+                scrollX: true,
+                scrollY: false,
+                click: true,
+            })
+        }
+    </script>
+@endsection
