@@ -530,7 +530,7 @@
     <div class="blank-block"></div>
 @stop
 
-@section('script')
+@section('js')
     <script src="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/script/bscroll.min.js"></script>
     <script>
         window.onload = function () {
