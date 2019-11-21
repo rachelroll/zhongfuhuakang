@@ -31,16 +31,20 @@
     <div class="blank-block"></div>
     <div class="blank-block"></div>
 
-    <div class="container" style="width: 900px;">
-        <div class="text-center">
-            <h2>{{ $news->title ?? '标题'}}</h2>
-            <br>
-            <p class="small-font">发布时间: {{ \Carbon\Carbon::createFromTimeStamp(strtotime($news->updated_at))->format('Y-m-d') }}</p>
-        </div>
+    <div class="container" style="width: 90%;">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <h2>{{ $news->title ?? '标题'}}</h2>
+                    <br>
+                    <p class="small-font">发布时间: {{ \Carbon\Carbon::createFromTimeStamp(strtotime($news->updated_at))->format('Y-m-d') }}</p>
+                </div>
 
-        <div class="blank-block"></div>
-        <div class="font-normal">
-            {!! $news->content !!}
+                <div class="blank-block"></div>
+                <div class="font-normal" style="text-indent: 0">
+                    {!! $news->content !!}
+                </div>
+            </div>
         </div>
     </div>
 

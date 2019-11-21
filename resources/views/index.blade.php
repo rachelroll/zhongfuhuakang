@@ -142,6 +142,9 @@
                     <div class="col-12 col-lg-5">
                         <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $promotion->cover }}" alt="" style="width: 100%;"/>
                     </div>
+                    @if(Agent::isPhone())
+                        <div class="blank-block-m"></div>
+                    @endif
                     <div class="col-12 col-lg-7">
                         <div class="title font-normal" style="text-indent: 0; color: #333">{{ $promotion->title }}</div>
                         <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($promotion->updated_at))->format('Y-m-d') }}</p>
@@ -160,7 +163,7 @@
                 <ul style="padding-left: 0px">
                     @foreach($news as $item)
                         <li>
-                            <div class="font-normal" style="font-size: 17px;">
+                            <div class="font-normal" style="font-size: 17px; text-indent: 0">
                                 <a href="{{ route('news.show', ['id' => $item->id]) }}" class="label">
                                     <span style="height: 40px; line-height: 40px">
                                         {{ \Carbon\Carbon::createFromTimeStamp(strtotime($item->updated_at))->format('Y-m-d') }}
@@ -340,28 +343,21 @@
                 prevEl: '.swiper-button-prev',
             },
         });
-        document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
-            e.preventDefault();
-            swiper.prependSlide([
-                '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
-                '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
-            ]);
-        });
-        document.querySelector('.prepend-slide').addEventListener('click', function (e) {
-            e.preventDefault();
-            swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
-        });
-        document.querySelector('.append-slide').addEventListener('click', function (e) {
-            e.preventDefault();
-            swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
-        });
-        document.querySelector('.append-2-slides').addEventListener('click', function (e) {
-            e.preventDefault();
-            swiper.appendSlide([
-                '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
-                '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
-            ]);
-        });
+        // document.querySelector('.prepend-slide').addEventListener('click', function (e) {
+        //     e.preventDefault();
+        //     swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
+        // });
+        // document.querySelector('.append-slide').addEventListener('click', function (e) {
+        //     e.preventDefault();
+        //     swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
+        // });
+        // document.querySelector('.append-2-slides').addEventListener('click', function (e) {
+        //     e.preventDefault();
+        //     swiper.appendSlide([
+        //         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
+        //         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
+        //     ]);
+        // });
     </script>
 
     <script>

@@ -20,12 +20,15 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12 col-lg-8">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4">
                         <img class="banner" src="{{ 'http://' .env('CDN_DOMAIN').'/'. $promotion->cover }}" alt=""/>
                     </div>
-                    <div class="col-8">
+                    @if(Agent::isPhone())
+                    <div class="blank-block-m"></div>
+                    @endif
+                    <div class="col-12 col-lg-8">
                         <a href="{{ route('news.show', ['id' => $promotion->id]) }}">
                             <h5>{{ $promotion->title }}</h5>
                             <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($promotion->updated_at))->format('Y-m-d') }}</p>
@@ -55,7 +58,10 @@
                     @endforeach
                 </ul>
             </div>
-            <div class="col-4">
+            @if(Agent::isPhone())
+                <div class="blank-block-m"></div>
+            @endif
+            <div class="col-12 col-lg-4">
                 <div class="text-center" style="background-color: #eee; margin-left: 16px; padding: 36px;">
                     <h5 style="color: #666">信息检索</h5>
                     <br>

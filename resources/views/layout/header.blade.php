@@ -39,20 +39,20 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">农业研究</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">公司概况</a>
-                            <a class="dropdown-item" href="#">组织架构</a>
-                            <a class="dropdown-item" href="#">企业文化</a>
+                            <a class="dropdown-item" href="#">农业论坛</a>
+                            <a class="dropdown-item" href="#">学术科研</a>
+                            <a class="dropdown-item" href="#">专利研究</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资讯中心</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">公司概况</a>
-                            <a class="dropdown-item" href="#">组织架构</a>
-                            <a class="dropdown-item" href="#">企业文化</a>
-                        </div>
+                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">社会责任</a>
+{{--                        <div class="dropdown-menu">--}}
+{{--                            <a class="dropdown-item" href="#">公司概况</a>--}}
+{{--                            <a class="dropdown-item" href="#">组织架构</a>--}}
+{{--                            <a class="dropdown-item" href="#">企业文化</a>--}}
+{{--                        </div>--}}
                     </li>
                 </ul>
             </div>
@@ -95,6 +95,12 @@
                 </li>
                 <li class="nav-item @if(request()->fullUrl() == route('news.index')) active @endif">
                     <a class="nav-link @if(request()->fullUrl() == route('news.index')) active @endif" href="{{ route('news.index') }}">资讯中心</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">农业研究</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">社会责任</a>
                 </li>
             </ul>
             <!-- Links -->

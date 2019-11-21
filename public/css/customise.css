@@ -10,6 +10,11 @@ div.blank-block {
     height: 60px;
 }
 
+div.blank-block-m {
+    height: 30px;
+    width: 100%;
+}
+
 .banner {
     width: 100%;
 }
@@ -325,7 +330,7 @@ a, a:link, a:visited, a:hover, a:active {
 .title-decoration {
     display: inline-block;
     width: 64px;
-    height: 5px;
+    height: 2px;
     background-color: #AF0E22;
 }
 
@@ -397,4 +402,8 @@ a.dropdown-item:hover, .dropdown-item:focus {
     width: 76px;
     height: 2px;
     background-color: #AF0E22;
+}
+
+button.navbar-toggler:focus {
+    outline: none !important;
 }

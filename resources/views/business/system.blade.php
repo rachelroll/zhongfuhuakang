@@ -27,17 +27,17 @@
 
 
         ul.nav {
-            background-color: #333;
-            overflow: auto;
+            /*background-color: #333;*/
+            /*overflow: auto;*/
             /*white-space: nowrap;*/
         }
 
         li.nav-item {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px;
-            text-decoration: none;
+            /*display: inline-block;*/
+            /*color: white;*/
+            /*text-align: center;*/
+            /*padding: 14px;*/
+            /*text-decoration: none;*/
         }
 
 
@@ -58,6 +58,7 @@
         div.scrollmenu div:hover {
             background-color: #777;
         }
+
         /* clear float */
         .clear:after {
             display: block;
@@ -71,15 +72,18 @@
             zoom: 1
 
         }
+
         /* end clear float */
         .swiper-container .swiper-wrapper {
             position: relative;
         }
+
         .swiper-container .swiper-wrapper .swiper-slide {
             /*border: 1px solid red;*/
             /*text-align: center;*/
             padding: 6px 0;
         }
+
         .child {
             display: none;
             /*position: absolute;*/
@@ -91,11 +95,13 @@
             font-size: 18px;
             color: #666;
         }
+
         .child li {
             line-height: 60px;
             border-bottom: solid 1px #8a8a8a;
 
         }
+
         .parent {
             font-size: 18px;
             color: #666;
@@ -105,6 +111,7 @@
         .show {
             display: block;
         }
+
         .hide {
             display: none;
         }
@@ -116,10 +123,12 @@
             position: relative;
             /*border: 1px solid #e0ebcf;*/
         }
+
         .scroll-wrapper::-webkit-scrollbar {
             display: none;
         }
-        .scroll-wrapper{
+
+        .scroll-wrapper {
             margin: 0 auto;
             /* overflow: hidden; */
             border-radius: 5px;
@@ -127,29 +136,18 @@
             -webkit-backface-visibility: hidden;
             -webkit-overflow-scrolling: touch; /* 2 */
         }
+
         .scroll-content {
             display: inline-block;
             white-space: nowrap;
         }
+
         .scroll-item {
             height: 48px;
             font-size: 24px;
             line-height: 48px;
             display: inline-block;
             padding: 0 10px;
-        }
-
-        .dropdown {
-            display: none;
-            width: 100%;
-            padding: 0 10px;
-            font-weight: normal;
-            font-size: 20px;
-            color: #666;
-        }
-        .dropdown li {
-            line-height: 60px;
-            border-bottom: solid 1px #8a8a8a;
         }
 
         .text-red {
@@ -174,42 +172,61 @@
     <div class="container">
         <div class="row">
             @if (Agent::isDesktop() )
-            <div class="col-md-3 col-12">
-                <div class="nav flex-column nav-pills sticky-top" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">业务体系</a>
-                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">战略布局</a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">农业生产</a>
-                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">乡村旅游观光</a>
-                    <a class="nav-link" id="v-pills-ecommerce-tab" data-toggle="pill" href="#v-pills-ecommerce" role="tab" aria-controls="v-pills-ecommerce" aria-selected="false">电子商务 + 农业</a>
-                    <a class="nav-link" id="v-pills-plans-tab" data-toggle="pill" href="#v-pills-plans" role="tab" aria-controls="v-pills-plans" aria-selected="false">规划计划</a>
-                    <a class="nav-link" id="v-pills-homestay-tab" data-toggle="pill" href="#v-pills-homestay" role="tab" aria-controls="v-pills-homestay" aria-selected="false">民宿</a>
+                <div class="col-md-3 col-12">
+                    <div class="nav flex-column nav-pills sticky-top" id="v-pills-tab" role="tablist"
+                         aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                           role="tab" aria-controls="v-pills-home" aria-selected="true">业务体系</a>
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                           role="tab" aria-controls="v-pills-profile" aria-selected="false">战略布局</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+                           role="tab" aria-controls="v-pills-messages" aria-selected="false">农业生产</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
+                           role="tab" aria-controls="v-pills-settings" aria-selected="false">乡村旅游观光</a>
+                        <a class="nav-link" id="v-pills-ecommerce-tab" data-toggle="pill" href="#v-pills-ecommerce"
+                           role="tab" aria-controls="v-pills-ecommerce" aria-selected="false">电子商务 + 农业</a>
+                        <a class="nav-link" id="v-pills-plans-tab" data-toggle="pill" href="#v-pills-plans" role="tab"
+                           aria-controls="v-pills-plans" aria-selected="false">规划计划</a>
+                        <a class="nav-link" id="v-pills-homestay-tab" data-toggle="pill" href="#v-pills-homestay"
+                           role="tab" aria-controls="v-pills-homestay" aria-selected="false">民宿</a>
+                    </div>
                 </div>
-            </div>
             @else
                 {{--                这里是滑动导航--}}
                 <div class="horizontal-container">
                     <div class="scroll-wrapper" ref="scroll">
                         <div class="scroll-content">
-                            <div class="scroll-item">
-                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">业务体系</a>
+                            <div class="scroll-item" data="#v-pills-home">
+                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                                   role="tab" aria-controls="v-pills-home" aria-selected="false">业务体系</a>
+                            </div>
+                            <div class="scroll-item" data="#v-pills-profile">
+                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                                   role="tab" aria-controls="v-pills-profile" aria-selected="false">战略布局</a>
+                            </div>
+                            <div class="scroll-item" data="#v-pills-messages">
+                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                   href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                   aria-selected="false">农业生产</a>
                             </div>
                             <div class="scroll-item">
-                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">战略布局</a>
+                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                                   href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                   aria-selected="false">乡村旅游观光</a>
                             </div>
                             <div class="scroll-item">
-                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">农业生产</a>
+                                <a class="nav-link" id="v-pills-ecommerce-tab" data-toggle="pill"
+                                   href="#v-pills-ecommerce" role="tab" aria-controls="v-pills-ecommerce"
+                                   aria-selected="false">电子商务 + 农业</a>
                             </div>
                             <div class="scroll-item">
-                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">乡村旅游观光</a>
+                                <a class="nav-link" id="v-pills-plans-tab" data-toggle="pill" href="#v-pills-plans"
+                                   role="tab" aria-controls="v-pills-plans" aria-selected="false">规划计划</a>
                             </div>
                             <div class="scroll-item">
-                                <a class="nav-link" id="v-pills-ecommerce-tab" data-toggle="pill" href="#v-pills-ecommerce" role="tab" aria-controls="v-pills-ecommerce" aria-selected="false">电子商务 + 农业</a>
-                            </div>
-                            <div class="scroll-item">
-                                <a class="nav-link" id="v-pills-plans-tab" data-toggle="pill" href="#v-pills-plans" role="tab" aria-controls="v-pills-plans" aria-selected="false">规划计划</a>
-                            </div>
-                            <div class="scroll-item">
-                                <a class="nav-link" id="v-pills-homestay-tab" data-toggle="pill" href="#v-pills-homestay" role="tab" aria-controls="v-pills-homestay" aria-selected="false">民宿</a>
+                                <a class="nav-link" id="v-pills-homestay-tab" data-toggle="pill"
+                                   href="#v-pills-homestay" role="tab" aria-controls="v-pills-homestay"
+                                   aria-selected="false">民宿</a>
                             </div>
                         </div>
                     </div>
@@ -217,7 +234,8 @@
             @endif
             <div class="col-md-9 col-12 font-normal" style="text-indent: 0">
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                         aria-labelledby="v-pills-home-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
                             <h2 class="content-title tite-with-decoration">业务体系</h2>
@@ -273,7 +291,8 @@
                             </div>
                             <div class="col-md-5 col-12">
                                 <p>
-                                    公司将建立众多的国内外农业基地，伴随基地农产品种类多样，基于农业标准化、市场化、品牌化、产业化的核心运营模式生产的农产品种类将越来越丰富，同时着力推动解决一定区域内农业产业一体化进程，将区域品牌、产品品牌、国家“三品一标”战略和 “食品安全”战略紧密结合，打造一系列优质农资产品。
+                                    公司将建立众多的国内外农业基地，伴随基地农产品种类多样，基于农业标准化、市场化、品牌化、产业化的核心运营模式生产的农产品种类将越来越丰富，同时着力推动解决一定区域内农业产业一体化进程，将区域品牌、产品品牌、国家“三品一标”战略和
+                                    “食品安全”战略紧密结合，打造一系列优质农资产品。
                                 </p>
                             </div>
                         </div>
@@ -296,7 +315,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                         aria-labelledby="v-pills-profile-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
                             <h2 class="content-title tite-with-decoration">战略布局</h2>
@@ -318,13 +338,16 @@
 
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">产业基地</a>
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                   aria-controls="home" aria-selected="true">产业基地</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">农业金融</a>
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                   aria-controls="profile" aria-selected="false">农业金融</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">农业科技</a>
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                   aria-controls="contact" aria-selected="false">农业科技</a>
                             </li>
                         </ul>
                         <div class="blank-block"></div>
@@ -335,7 +358,8 @@
                                 </div>
                                 <div class="blank-block"></div>
                                 <p>
-                                    北京中福华康农业开发有限公司将建立众多的国内外农业基地，伴随基地农产品种类多样，基于农业标准化、市场化、品牌化、产业化的核心运营模式生产的农产品种类将越来越丰富，同时着力推动解决一定区域内农业产业一体化进程，将区域品牌、产品品牌、国家“三品一标”战略和 “食品安全”战略紧密结合，打造一系列优质农资产品。
+                                    北京中福华康农业开发有限公司将建立众多的国内外农业基地，伴随基地农产品种类多样，基于农业标准化、市场化、品牌化、产业化的核心运营模式生产的农产品种类将越来越丰富，同时着力推动解决一定区域内农业产业一体化进程，将区域品牌、产品品牌、国家“三品一标”战略和
+                                    “食品安全”战略紧密结合，打造一系列优质农资产品。
                                 </p>
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -343,19 +367,22 @@
                                     <img class="banner" src="/img/new/05_02-Strategic-layout.jpg" alt=""/>
                                 </div>
                                 <div class="blank-block"></div>
-                                <p>北京中福华康农业开发有限公司着力培育特色农企、潜力农企、拟上市公司，培育行业龙头企业，全面实施以品牌为核心，产业投资、渠道整合、品牌建设和金融服务四轮驱动的整体发展战略，整合社会资源，聚集政府资本、金融资本、社会资金，聚集市场规模、人才、科技，推动农业龙头企业的建设和发展，用科技和金融带动现代农业、农资全产业链的高效、安全和可持续发展。</p>
+                                <p>
+                                    北京中福华康农业开发有限公司着力培育特色农企、潜力农企、拟上市公司，培育行业龙头企业，全面实施以品牌为核心，产业投资、渠道整合、品牌建设和金融服务四轮驱动的整体发展战略，整合社会资源，聚集政府资本、金融资本、社会资金，聚集市场规模、人才、科技，推动农业龙头企业的建设和发展，用科技和金融带动现代农业、农资全产业链的高效、安全和可持续发展。</p>
                             </div>
                             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                                 <div class="">
                                     <img class="banner" src="/img/new/05_03-Strategic-layout.jpg" alt=""/>
                                 </div>
                                 <div class="blank-block"></div>
-                                <p>北京中福华康农业开发有限公司成立研究院，把握未来新技术发展方向，逐步加深主导产业技术密集度，全面寻求创新技术和项目并进行孵化，整合研发资源；新技术和新成果的引进和推广；对国内外的科技交流与合作；承担技术职能管理工作；构建能统筹规划及高效运作的多级研发体系与建立公共技术服务平台。</p>
+                                <p>
+                                    北京中福华康农业开发有限公司成立研究院，把握未来新技术发展方向，逐步加深主导产业技术密集度，全面寻求创新技术和项目并进行孵化，整合研发资源；新技术和新成果的引进和推广；对国内外的科技交流与合作；承担技术职能管理工作；构建能统筹规划及高效运作的多级研发体系与建立公共技术服务平台。</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                         aria-labelledby="v-pills-messages-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
                             <h2 class="content-title tite-with-decoration">农业生产</h2>
@@ -367,11 +394,13 @@
                         </div>
                         <div class="blank-block"></div>
                         <div>
-                            <p>以蔬果类生鲜农产品规模化生产为产业核心，从种子、有机肥农业生产资料开发到农产品种植加工，再到连锁专卖、单位配送、市场批发和出口外销“四位一体”的现代农产品营销网络，构建形成上下游环节一体化、综合配套集群化的现代农业产业链。</p>
+                            <p>
+                                以蔬果类生鲜农产品规模化生产为产业核心，从种子、有机肥农业生产资料开发到农产品种植加工，再到连锁专卖、单位配送、市场批发和出口外销“四位一体”的现代农产品营销网络，构建形成上下游环节一体化、综合配套集群化的现代农业产业链。</p>
                             <p>建立现代农业产业基地，利用不同经纬度气候分布特征，最大限度规避自然灾害风险，最大限度开发农作物种质资源效益，主营蔬菜品种基本实现周年化、大批量均衡供应。</p>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                         aria-labelledby="v-pills-settings-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
                             <h2 class="content-title tite-with-decoration">乡村旅游观光</h2>
@@ -383,11 +412,15 @@
                         </div>
                         <div class="blank-block"></div>
                         <div>
-                            <p>通过农村设施与空间、农业生产场地、特色农业产品、农业经营活动、农村生态环境、农村人文风俗等资源的整合，经过规划设计发挥农业和农村的休闲农业旅游功能，形成农业旅游消费。将“风土”——特有的地理环境；“风物”——地方特有的物产；“风俗”——地方民俗；“风景”——可供欣赏的景色、景象、景观；“风昧”——地方特色建筑、特色食品、特色服饰；“民谣”——民歌民谣和民间传说故事；“习俗”——地方特有的风俗习惯包装为产品，将乡村特殊的自然风貌和风土人情产业化、产权化。</p>
-                            <p>建设新农村的目的就是要改变城乡二元结构，实现城乡一体化。一是通过城镇公共基础设施向乡村延伸，配套乡村农业旅游服务需要的基础设施。二是统筹“城区、景区、园区、郊区”等农业旅游资源，统一规划，形成上至城市的都市农业旅游、景区农业旅游、工业农业旅游，下至乡村的“农家乐”、“生态游”等农业旅游线路。通过城乡一体化发展。实现农民就地转移，增加农民收入。</p>
-                        </div>`
+                            <p>
+                                通过农村设施与空间、农业生产场地、特色农业产品、农业经营活动、农村生态环境、农村人文风俗等资源的整合，经过规划设计发挥农业和农村的休闲农业旅游功能，形成农业旅游消费。将“风土”——特有的地理环境；“风物”——地方特有的物产；“风俗”——地方民俗；“风景”——可供欣赏的景色、景象、景观；“风昧”——地方特色建筑、特色食品、特色服饰；“民谣”——民歌民谣和民间传说故事；“习俗”——地方特有的风俗习惯包装为产品，将乡村特殊的自然风貌和风土人情产业化、产权化。</p>
+                            <p>
+                                建设新农村的目的就是要改变城乡二元结构，实现城乡一体化。一是通过城镇公共基础设施向乡村延伸，配套乡村农业旅游服务需要的基础设施。二是统筹“城区、景区、园区、郊区”等农业旅游资源，统一规划，形成上至城市的都市农业旅游、景区农业旅游、工业农业旅游，下至乡村的“农家乐”、“生态游”等农业旅游线路。通过城乡一体化发展。实现农民就地转移，增加农民收入。</p>
+                        </div>
+                        `
                     </div>
-                    <div class="tab-pane fade" id="v-pills-ecommerce" role="tabpanel" aria-labelledby="v-pills-ecommerce-tab">
+                    <div class="tab-pane fade" id="v-pills-ecommerce" role="tabpanel"
+                         aria-labelledby="v-pills-ecommerce-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
                             <h2 class="content-title tite-with-decoration">电子商务 + 农业</h2>
@@ -399,8 +432,10 @@
                         </div>
                         <div class="blank-block"></div>
                         <div>
-                            <p>全面实施以品牌为核心，产业投资、渠道整合、品牌建设和金融服务四轮驱动的整体发展战略，用科技和金融带动现代农业的高效、安全和可持续发展：在产业端，通过产业投资获取全球优质农产品资源和权益，形成农资、农机产品的有效供给；在渠道端，积极推动供销系统、传统农批市场向智慧物流中心转型升级，打造全球优质农产品的线下、线上交易平台，实现资源整合和供销流通；贯穿全产业链金融服务、冷链物流及全程质量监管，构建农业产业链生态体系。</p>
-                            <p>以品牌建设为驱动，全面建立农产品育种开发、生产种植、物流运营、电子商务及金融服务体系，着力塑造“健康农业、放心食品、安心服务”的产品品牌形象。联合政府创办农业论坛，促进农业科研和理论创新，增强品牌核心竞争力。</p>
+                            <p>
+                                全面实施以品牌为核心，产业投资、渠道整合、品牌建设和金融服务四轮驱动的整体发展战略，用科技和金融带动现代农业的高效、安全和可持续发展：在产业端，通过产业投资获取全球优质农产品资源和权益，形成农资、农机产品的有效供给；在渠道端，积极推动供销系统、传统农批市场向智慧物流中心转型升级，打造全球优质农产品的线下、线上交易平台，实现资源整合和供销流通；贯穿全产业链金融服务、冷链物流及全程质量监管，构建农业产业链生态体系。</p>
+                            <p>
+                                以品牌建设为驱动，全面建立农产品育种开发、生产种植、物流运营、电子商务及金融服务体系，着力塑造“健康农业、放心食品、安心服务”的产品品牌形象。联合政府创办农业论坛，促进农业科研和理论创新，增强品牌核心竞争力。</p>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-plans" role="tabpanel" aria-labelledby="v-pills-plans-tab">
@@ -413,18 +448,22 @@
 
                         <ul class="nav nav-tabs sticky-top" style="background-color: #fff;" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first" role="tab" aria-controls="first" aria-selected="true">2017 - 2019年</a>
+                                <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first" role="tab"
+                                   aria-controls="first" aria-selected="true">2017 - 2019年</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab" aria-controls="second" aria-selected="false">2019 - 2022年</a>
+                                <a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab"
+                                   aria-controls="second" aria-selected="false">2019 - 2022年</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="third-tab" data-toggle="tab" href="#third" role="tab" aria-controls="third" aria-selected="false">2022 - 2025年</a>
+                                <a class="nav-link" id="third-tab" data-toggle="tab" href="#third" role="tab"
+                                   aria-controls="third" aria-selected="false">2022 - 2025年</a>
                             </li>
                         </ul>
                         <div class="blank-block"></div>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane strategy fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+                            <div class="tab-pane strategy fade show active" id="first" role="tabpanel"
+                                 aria-labelledby="first-tab">
                                 <div class="">
                                     <img class="banner" src="/img/new/09_123Planning-plan-1.jpg" alt=""/>
                                 </div>
@@ -435,8 +474,7 @@
                                 </p>
                                 <br>
                                 <h5>完善农业产业链：</h5>
-                                <p>
-                                    完成农业机械行业龙头企业及农产品和农业生产资料龙头企业的控股，综合实力进入国内前十，实现品牌统一。
+                                <p>完成农业机械行业龙头企业及农产品和农业生产资料龙头企业的控股，综合实力进入国内前十，实现品牌统一。
                                 </p>
                                 <br>
                                 <h5>新农村建设及农业旅游：</h5>
@@ -459,7 +497,8 @@
                                     通过区域品牌推广，概念营销，预热区域，吸引客源，以区域品牌整体营销品牌统领各产业链。
                                 </p>
                             </div>
-                            <div class="tab-pane strategy fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+                            <div class="tab-pane strategy fade" id="second" role="tabpanel"
+                                 aria-labelledby="second-tab">
                                 <div class="">
                                     <img class="banner" src="/img/new/09_123Planning-plan-2.jpg" alt=""/>
                                 </div>
@@ -507,7 +546,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-homestay" role="tabpanel" aria-labelledby="v-pills-homestay-tab">
+                    <div class="tab-pane fade" id="v-pills-homestay" role="tabpanel"
+                         aria-labelledby="v-pills-homestay-tab">
                         <div class="blank-block"></div>
                         <div class="text-center">
                             <h2 class="content-title tite-with-decoration">民宿</h2>
@@ -519,7 +559,8 @@
                         </div>
                         <div class="blank-block"></div>
                         <div>
-                            <p>随着我国旅游事业的蓬勃发展，乡村民宿成为重要载体。北京中福华康农业开发有限公司致力于推进乡村民宿，依托传统村落、美丽乡村、共享农庄等乡村旅游资源，结合全域旅游空间布局和城乡交通网络体系，将乡村民宿与本地资源禀赋、区域优势、产业基础、乡村文化和生态条件结合起来，坚持政府引导、市场推动、社会参与、利益共享原则，统筹规划、因地制宜、循序渐进，真正发挥乡村民宿在促进城乡融合发展、产业转型创新、乡村文化振兴、生态环境保护、农民持续增收、农村治理有效的功能作用。</p>
+                            <p>
+                                随着我国旅游事业的蓬勃发展，乡村民宿成为重要载体。北京中福华康农业开发有限公司致力于推进乡村民宿，依托传统村落、美丽乡村、共享农庄等乡村旅游资源，结合全域旅游空间布局和城乡交通网络体系，将乡村民宿与本地资源禀赋、区域优势、产业基础、乡村文化和生态条件结合起来，坚持政府引导、市场推动、社会参与、利益共享原则，统筹规划、因地制宜、循序渐进，真正发挥乡村民宿在促进城乡融合发展、产业转型创新、乡村文化振兴、生态环境保护、农民持续增收、农村治理有效的功能作用。</p>
                         </div>
                     </div>
                 </div>
@@ -530,7 +571,7 @@
     <div class="blank-block"></div>
 @stop
 
-@section('script')
+@section('js')
     <script src="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/script/bscroll.min.js"></script>
     <script>
         window.onload = function () {
@@ -541,5 +582,31 @@
                 click: true,
             })
         }
+
+        $(function() {
+            $('.scroll-item').on('click',function(e) {
+                    var hash = document.location.hash;
+                    console.log(222);
+                    console.log('1111' + hash);
+                    if (hash !="") {
+                        setTimeout(function() {
+                            if (location.hash) {
+                                window.scrollTo(0, 0);
+                                window.location.href = hash;
+                            }
+                        }, 1);
+                    }
+                    else {
+                        return false;
+                    }
+
+                // e.preventDefault();
+                $('.scroll-item').children().removeClass('text-red');
+                $(this).children().addClass('text-red');
+                console.log($(this).attr('data'));
+                location.href = $(this).attr('data');
+            })
+        })
+
     </script>
 @endsection

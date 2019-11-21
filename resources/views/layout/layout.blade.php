@@ -46,9 +46,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
+@yield('js')
 <script>
     // $('.nav-pills > li > .dropdown-toggle').click(function () {
     //     window.location = $(this).attr('href');
@@ -62,46 +64,6 @@
         });
     });
 
-
-
-<!-- Initialize Swiper -->
-    var appendNumber = 4;
-    var prependNumber = 1;
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
-        centeredSlides: false,
-        spaceBetween: 3,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-    document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.prependSlide([
-            '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
-            '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
-        ]);
-    });
-    document.querySelector('.prepend-slide').addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
-    });
-    document.querySelector('.append-slide').addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
-    });
-    document.querySelector('.append-2-slides').addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.appendSlide([
-            '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
-            '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
-        ]);
-    });
 </script>
 
 </body>
