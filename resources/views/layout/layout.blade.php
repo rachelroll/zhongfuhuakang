@@ -63,8 +63,8 @@
             $('.animated-icon2').toggleClass('open');
         });
     });
-
 </script>
+@yield('js')
 
 </body>
 </html>

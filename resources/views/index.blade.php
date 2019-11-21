@@ -343,6 +343,7 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+<<<<<<< HEAD
         // document.querySelector('.prepend-slide').addEventListener('click', function (e) {
         //     e.preventDefault();
         //     swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
@@ -358,6 +359,9 @@
         //         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
         //     ]);
         // });
+=======
+
+>>>>>>> 9868e00e931e29f550ba1fa3b1ddfca423aa874b
     </script>
 
     <script>
