@@ -44,7 +44,7 @@
                 <div class="business-english-title">Focus agriculture</div>
             </div>
             <div class="row">
-                <div class="col-md-7 col-12">
+                <div class="col-md-7 col-12" style="margin-bottom: 10px">
                     <img class="banner" src="/img/new/04-Business system-01.jpg" alt=""/>
                 </div>
                 <div class="col-md-5 col-12">
@@ -59,7 +59,7 @@
                     <p>区域发展</p>
                     <span></span>
                 </div>
-                <div class="business-english-title">Regional development</div>
+                <div class="business-english-title" style="font-size: 31px">Regional development</div>
             </div>
             <div class="row">
                 <div class="col-md-5 col-12">
@@ -80,7 +80,7 @@
                 <div class="business-english-title">Agricultural base</div>
             </div>
             <div class="row">
-                <div class="col-md-7 col-12">
+                <div class="col-md-7 col-12"  style="margin-bottom: 10px">
                     <img class="banner" src="/img/new/04-Business system-03.jpg" alt=""/>
                 </div>
                 <div class="col-md-5 col-12">
@@ -111,7 +111,6 @@
         </div>
         <div class="tab-pane fade" id="strategy" role="tabpanel"
              aria-labelledby="strategy-tab">
-            <a role="tab" id="profile"></a>
             <div class="blank-block"></div>
             <div class="text-center">
                 <h2 class="content-title tite-with-decoration">战略布局</h2>

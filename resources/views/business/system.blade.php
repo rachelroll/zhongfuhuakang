@@ -276,7 +276,6 @@
                         </div>
                         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                              aria-labelledby="v-pills-profile-tab">
-                            <a role="tab" id="profile"></a>
                             <div class="blank-block"></div>
                             <div class="text-center">
                                 <h2 class="content-title tite-with-decoration">战略布局</h2>
