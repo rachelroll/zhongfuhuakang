@@ -64,9 +64,9 @@
     <nav class="navbar navbar-dark red lighten-1 mb-4">
 
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">
+{{--        <a class="navbar-brand" href="#">--}}
             <img src="/img/new/logo.png" alt="" style="width: 40%; height: 40%"/>
-        </a>
+{{--        </a>--}}
 
         <!-- Collapse button -->
         <button class="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent23"

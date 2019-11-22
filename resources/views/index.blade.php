@@ -231,7 +231,7 @@
                             <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
                         </a>
                         <div class="mask" style="display: none" label = 'overview'>
-                            <h5>关于我们</h5>
+                            <h5>农业研究</h5>
                         </div>
                     </div>
                 </div>
@@ -241,17 +241,7 @@
                             <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
                         </a>
                         <div class="mask" style="display: none" label = 'overview'>
-                            <h5>关于我们</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="img-block">
-                        <a href="">
-                            <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
-                        </a>
-                        <div class="mask" style="display: none" label = 'overview'>
-                            <h5>关于我们</h5>
+                            <h5>社会责任</h5>
                         </div>
                     </div>
                 </div>
@@ -259,8 +249,8 @@
             <!-- Add Pagination -->
 {{--            <div class="swiper-pagination"></div>--}}
         <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+{{--            <div class="swiper-button-next"></div>--}}
+{{--            <div class="swiper-button-prev"></div>--}}
         </div>
     </div>
 
@@ -343,25 +333,7 @@
                 prevEl: '.swiper-button-prev',
             },
         });
-<<<<<<< HEAD
-        // document.querySelector('.prepend-slide').addEventListener('click', function (e) {
-        //     e.preventDefault();
-        //     swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
-        // });
-        // document.querySelector('.append-slide').addEventListener('click', function (e) {
-        //     e.preventDefault();
-        //     swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
-        // });
-        // document.querySelector('.append-2-slides').addEventListener('click', function (e) {
-        //     e.preventDefault();
-        //     swiper.appendSlide([
-        //         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
-        //         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
-        //     ]);
-        // });
-=======
 
->>>>>>> 9868e00e931e29f550ba1fa3b1ddfca423aa874b
     </script>
 
     <script>
