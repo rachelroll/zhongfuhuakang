@@ -413,3 +413,19 @@ a.dropdown-item:hover, .dropdown-item:focus {
 button.navbar-toggler:focus {
     outline: none !important;
 }
+
+.artical-container {
+    /*padding-right: 66px;*/
+}
+
+.btn-primary {
+    color: #AF0E22;
+    background-color: #fff;
+    border-color: #AF0E22;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #AF0E22;
+    border-color: #AF0E22;
+}
