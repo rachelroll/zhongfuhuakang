@@ -415,7 +415,10 @@ button.navbar-toggler:focus {
 }
 
 .artical-container {
-    /*padding-right: 66px;*/
+    background-color: #fff;
+    padding: 60px 40px;
+    border-radius: .28571429rem;
+    transition: box-shadow .1s ease,transform .1s ease,-webkit-transform .1s ease;
 }
 
 .btn-primary {
@@ -428,4 +431,8 @@ button.navbar-toggler:focus {
     color: #fff;
     background-color: #AF0E22;
     border-color: #AF0E22;
+}
+
+.grid-back {
+    background-color: #e7e7e7;
 }
