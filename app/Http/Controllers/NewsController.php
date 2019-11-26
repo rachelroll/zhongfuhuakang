@@ -41,4 +41,15 @@ class NewsController extends Controller
 
         return view('news.show', compact('news'));
     }
+
+    public function search(Request $request)
+    {
+        $info = $request->input('news');
+
+        $result = News::where('title', 'like', '%'. $info. '%')->get();
+
+        $count = $result->count();
+
+        return view('news.search', compact('result', 'info', 'count'));
+    }
 }

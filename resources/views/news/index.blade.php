@@ -6,9 +6,9 @@
         /*    list-style-type: none;*/
         /*}*/
 
-        /*p a, p a:hover {*/
-        /*    color: #AF0E22;*/
-        /*}*/
+        a:hover {
+            color: #AF0E22;
+        }
     </style>
     @endsection
 
@@ -19,23 +19,28 @@
 
     @foreach($news as $key => $items)
         <div class="container">
-            <a href="{{ route('news.list', ['id'=> $key]) }}">
-                <h2 class="content-title">{{ $items->type }}</h2>
-            </a>
+            <h2 class="content-title">
+                <a href="{{ route('news.list', ['id'=> $key]) }}">{{ $items->type }}
+                </a>
+            </h2>
         </div>
 
         <div class="blank-block-m"></div>
 
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-3">
-                    <img class="banner" src="{{ 'http://' .env('CDN_DOMAIN').'/'. $items->promotion->cover }}" alt="" />
+                <div class="col-12 col-lg-3 wrap-img">
+                    <a href="{{ route('news.show', ['id' => $items->promotion->id]) }}">
+                        <img class="banner rounded scale-big" src="{{ 'http://' .env('CDN_DOMAIN').'/'. $items->promotion->cover }}" alt="" />
+                    </a>
                 </div>
                 @if(Agent::isPhone())
                     <div class="blank-block-m"></div>
                 @endif
                 <div class="col-12 col-lg-4">
-                    <h5>{{ $items->promotion->title }}</h5>
+                    <a href="{{ route('news.show', ['id' => $items->promotion->id]) }}">
+                        <h5>{{ $items->promotion->title }}</h5>
+                    </a>
                     <p class="small-font">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($items->promotion->updated_at))->format('Y-m-d') }}</p>
                     <p>{{ $items->promotion->description }}</p>
                     <br>
