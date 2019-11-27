@@ -53,7 +53,12 @@
         }
 
         .swiper-wrapper {
-            height: 280px;
+            /*height: 498px;*/
+        }
+        .img-box {
+            width: 100%;
+            overflow: hidden;
+            height: 498px;
         }
 
         .swiper-slide img {
@@ -140,7 +145,7 @@
             <div class="col col-lg-7">
                 <div class="row">
                     <div class="col-12 col-lg-5">
-                        <img src="{{ 'http://' .env('CDN_DOMAIN').'/'. $promotion->cover }}" alt="" style="width: 100%;"/>
+                        <img src="{{ '//' .env('CDN_DOMAIN').'/'. $promotion->cover }}" alt="" style="width: 100%;"/>
                     </div>
                     @if(Agent::isPhone())
                         <div class="blank-block-m"></div>
@@ -196,65 +201,69 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="img-block wrap-img">
-                        <a href="{{ route('about.overview') }}">
-                            <img class="image rounded scale-big" src="./img/new/370x290-aboutus.jpg" alt=""/>
-                        </a>
+                    <div>
+                        <div class="img-block wrap-img">
+                            <a href="{{ route('about.overview') }}">
+                                <img class="image rounded scale-big" src="./img/new/370x290-aboutus.jpg" alt=""/>
+                            </a>
+                        </div>
                         <div class="label-swiper">
                             <h5>关于我们</h5>
                         </div>
                     </div>
+
                 </div>
                 <div class="swiper-slide">
-                    <div class="img-block wrap-img">
-                        <a href="{{ route('business.system') }}">
-                            <img class="image" src="./img/new/370x290-Business-layout.jpg" alt=""/>
-                        </a>
-                        <div class="label-swiper">
-                            <h5>业务布局</h5>
+                   <div>
+                       <div class="img-block wrap-img">
+                           <a href="{{ route('business.system') }}">
+                               <img class="image rounded scale-big" src="./img/new/370x290-Business-layout.jpg" alt=""/>
+                           </a>
+                       </div>
+                       <div class="label-swiper">
+                           <h5>业务布局</h5>
+                       </div>
+                   </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="img-block wrap-img">
+                            <a href="{{ route('news.index') }}">
+                                <img class="image" src="./img/new/370x290-news.jpg" alt=""/>
+                            </a>
                         </div>
-{{--                        <div class="mask" style="display: none">--}}
-{{--                            <h5>业务布局</h5>--}}
-{{--                        </div>--}}
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="img-block wrap-img">
-                        <a href="{{ route('news.index') }}">
-                            <img class="image" src="./img/new/370x290-news.jpg" alt=""/>
-                        </a>
                         <div class="label-swiper">
                             <h5>资讯中心</h5>
                         </div>
-{{--                        <div class="mask" style="display: none">--}}
-{{--                            <h5>资讯中心</h5>--}}
-{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="img-block wrap-img">
-                        <a href="">
-                            <img class="image" src="./img/new/370x290-Agriculturalresearch.jpg" alt=""/>
-                        </a>
+                    <div>
+                        <div class="img-block wrap-img">
+                            <a href="">
+                                <img class="image" src="./img/new/370x290-Agriculturalresearch.jpg" alt=""/>
+                            </a>
+
+                        </div>
                         <div class="label-swiper">
                             <h5>农业研究</h5>
                         </div>
-{{--                        <div class="mask" style="display: none" label = 'overview'>--}}
-{{--                            <h5>农业研究</h5>--}}
-{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="img-block wrap-img">
-                        <a href="{{ route('responsibility.index') }}">
-                            <img class="image" src="./img/new/370x290-Socialresponsibility.jpg" alt=""/>
-                        </a>
+                    <div>
+                        <div class="img-block wrap-img">
+                            <a href="{{ route('responsibility.index') }}">
+                                <img class="image" src="./img/new/370x290-Socialresponsibility.jpg" alt=""/>
+                            </a>
+
+                            {{--                        <div class="mask" style="display: none" label = 'overview'>--}}
+                            {{--                            <h5>社会责任</h5>--}}
+                            {{--                        </div>--}}
+                        </div>
                         <div class="label-swiper">
                             <h5>社会责任</h5>
                         </div>
-{{--                        <div class="mask" style="display: none" label = 'overview'>--}}
-{{--                            <h5>社会责任</h5>--}}
-{{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -350,13 +359,13 @@
 
     <script>
         $(document).ready(function(){
-            $(".img-block").hover(function(){
-                $(this).children(".mask").css("height",$(".image").height());
-                $(this).children(".mask").css("width",$(".image").width());
-                $(this).children(".mask").show();
-            }, function(){
-                $(this).children(".mask").hide();
-            });
+            // $(".img-block").hover(function(){
+            //     $(this).children(".mask").css("height",$(".image").height());
+            //     $(this).children(".mask").css("width",$(".image").width());
+            //     $(this).children(".mask").show();
+            // }, function(){
+            //     $(this).children(".mask").hide();
+            // });
 
             $(".mask").click(function () {
                 var url = $(this).attr('label');
