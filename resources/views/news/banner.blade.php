@@ -1,3 +1,3 @@
 <div class="container-fluit">
-    <img class="banner" src="/img/new/03-corporate culture-1.jpg" alt=""/>
+    <img class="banner" src="/img/new/informationcentret-banner.jpg" alt=""/>
 </div>

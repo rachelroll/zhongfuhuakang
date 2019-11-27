@@ -494,3 +494,9 @@ button.navbar-toggler:focus {
     -webkit-transform: scale(1.12);
     transform: scale(1.12);
 }
+
+.label-swiper {
+    margin-top: 10px;
+    color: #666;
+    height: 280px;
+}

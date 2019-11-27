@@ -53,7 +53,7 @@
         }
 
         .swiper-wrapper {
-            height: 206px;
+            height: 280px;
         }
 
         .swiper-slide img {
@@ -196,53 +196,65 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="img-block">
-                        <a href="">
-                            <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
+                    <div class="img-block wrap-img">
+                        <a href="{{ route('about.overview') }}">
+                            <img class="image rounded scale-big" src="./img/new/370x290-aboutus.jpg" alt=""/>
                         </a>
-                        <div class="mask" style="display: none" label = 'overview'>
+                        <div class="label-swiper">
                             <h5>关于我们</h5>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="img-block">
-                        <a href="">
+                    <div class="img-block wrap-img">
+                        <a href="{{ route('business.system') }}">
                             <img class="image" src="./img/new/370x290-Business-layout.jpg" alt=""/>
                         </a>
-                        <div class="mask" style="display: none">
+                        <div class="label-swiper">
                             <h5>业务布局</h5>
                         </div>
+{{--                        <div class="mask" style="display: none">--}}
+{{--                            <h5>业务布局</h5>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="img-block">
-                        <a href="">
+                    <div class="img-block wrap-img">
+                        <a href="{{ route('news.index') }}">
                             <img class="image" src="./img/new/370x290-news.jpg" alt=""/>
                         </a>
-                        <div class="mask" style="display: none">
+                        <div class="label-swiper">
                             <h5>资讯中心</h5>
                         </div>
+{{--                        <div class="mask" style="display: none">--}}
+{{--                            <h5>资讯中心</h5>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="img-block">
+                    <div class="img-block wrap-img">
                         <a href="">
-                            <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
+                            <img class="image" src="./img/new/370x290-Agriculturalresearch.jpg" alt=""/>
                         </a>
-                        <div class="mask" style="display: none" label = 'overview'>
+                        <div class="label-swiper">
                             <h5>农业研究</h5>
                         </div>
+{{--                        <div class="mask" style="display: none" label = 'overview'>--}}
+{{--                            <h5>农业研究</h5>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="img-block">
-                        <a href="">
-                            <img class="image" src="./img/new/370x290-aboutus.jpg" alt=""/>
+                    <div class="img-block wrap-img">
+                        <a href="{{ route('responsibility.index') }}">
+                            <img class="image" src="./img/new/370x290-Socialresponsibility.jpg" alt=""/>
                         </a>
-                        <div class="mask" style="display: none" label = 'overview'>
+                        <div class="label-swiper">
                             <h5>社会责任</h5>
                         </div>
+{{--                        <div class="mask" style="display: none" label = 'overview'>--}}
+{{--                            <h5>社会责任</h5>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>

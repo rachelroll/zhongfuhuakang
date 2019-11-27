@@ -33,7 +33,8 @@ Route::get('/news-list/{id}', 'NewsController@list')->name('news.list'); // 新�
 Route::get('/news-show/{id}', 'NewsController@show')->name('news.show'); // 详情页
 Route::post('/news-search', 'NewsController@search')->name('news.search'); // 详情页
 
-
+// 社会责任
+Route::get('/responsiblity', 'ResponsibilityController@index')->name('responsibility.index');
 
 
 
