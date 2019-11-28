@@ -38,7 +38,7 @@
                 <div class="col-lg-9">
                     <div class="artical-container">
                          <div class="text-center">
-                             <h2>{{ $news->title ?? '标题'}}</h2>
+                             <h2 class="content-title">{{ $news->title ?? '标题'}}</h2>
                              <br>
                              <p class="small-font">发布时间: {{ \Carbon\Carbon::createFromTimeStamp(strtotime($news->updated_at))->format('Y-m-d') }}</p>
                          </div>
