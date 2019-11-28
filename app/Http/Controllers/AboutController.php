@@ -15,6 +15,7 @@ class AboutController extends Controller
     // 组织架构
     public function structure()
     {
+        dd(request()->fullUrl(), route('about.structure'));
         return view('about.structure');
     }
 
