@@ -288,7 +288,7 @@
         </div>
 
         <!-- Swiper -->
-        <div class="swiper-container">
+        <div class="swiper-container" @if(Agent::isPhone()) style="height: 90px" @endif>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="">
@@ -326,8 +326,10 @@
                     </a>
                 </div>
             </div>
+            @if(Agent::isDesktop())
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
+            @endif
             <!-- Add Arrows -->
 {{--            <div class="swiper-button-next"></div>--}}
 {{--            <div class="swiper-button-prev"></div>--}}
