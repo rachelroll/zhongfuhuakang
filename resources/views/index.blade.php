@@ -98,6 +98,10 @@
         button.more a, button.more a:link {
             color: #333;
         }
+
+        .swiper-slide {
+            height: 104%;
+        }
     </style>
 @endsection
 @section('content')
@@ -229,7 +233,7 @@
                     <div>
                         <div class="img-block wrap-img">
                             <a href="{{ route('news.index') }}">
-                                <img class="image" src="./img/new/370x290-news.jpg" alt=""/>
+                                <img class="image rounded scale-big" src="./img/new/370x290-news.jpg" alt=""/>
                             </a>
                         </div>
                         <div class="label-swiper">
@@ -241,7 +245,7 @@
                     <div>
                         <div class="img-block wrap-img">
                             <a href="">
-                                <img class="image" src="./img/new/370x290-Agriculturalresearch.jpg" alt=""/>
+                                <img class="image rounded scale-big" src="./img/new/370x290-Agriculturalresearch.jpg" alt=""/>
                             </a>
 
                         </div>
@@ -254,7 +258,7 @@
                     <div>
                         <div class="img-block wrap-img">
                             <a href="{{ route('responsibility.index') }}">
-                                <img class="image" src="./img/new/370x290-Socialresponsibility.jpg" alt=""/>
+                                <img class="image rounded scale-big" src="./img/new/370x290-Socialresponsibility.jpg" alt=""/>
                             </a>
 
                             {{--                        <div class="mask" style="display: none" label = 'overview'>--}}
