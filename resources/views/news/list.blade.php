@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-9">
-                    <div class="artical-container">
+                    <div @if(Agent::isDesktop()) class="artical-container" @endif>
                         <div class="r-shadow-wrapper">
                             <div class="row r-shadow-wrapper-card">
                                 <div class="col-12 col-lg-4">
