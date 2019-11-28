@@ -17,7 +17,7 @@
             <div class="swiper-slide">
                 <a href="{{ route('about.overview') }}">
                     <p style="margin-bottom: 0">公司概况</p>
-                    <span class="active_nav" @if(request()->fullUrl() == route('about.overview')) style="display: block;" @else style="display: none" @endif></span>
+                    <span class="active_nav"></span>
                 </a>
             </div>
             <div class="swiper-slide">
