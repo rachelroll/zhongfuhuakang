@@ -1,5 +1,148 @@
 @extends('layout.layout')
+@section('css')
+    <style>
+        .wrap-iconic-case .text-image-row div.single-image {
+            background-color: #ddd;
+            padding: 32px;
+            margin-right: 30px;
+        }
 
+
+        ul.nav {
+            /*background-color: #333;*/
+            /*overflow: auto;*/
+            /*white-space: nowrap;*/
+        }
+
+        li.nav-item {
+            /*display: inline-block;*/
+            /*color: white;*/
+            /*text-align: center;*/
+            /*padding: 14px;*/
+            /*text-decoration: none;*/
+        }
+
+
+        div.scrollmenu {
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        div.scrollmenu div {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        div.scrollmenu div:hover {
+            background-color: #777;
+        }
+
+        /* clear float */
+        .clear:after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0
+        }
+
+        .clear {
+            zoom: 1
+
+        }
+
+        /* end clear float */
+        .swiper-container .swiper-wrapper {
+            position: relative;
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide {
+            /*border: 1px solid red;*/
+            /*text-align: center;*/
+            padding: 6px 0;
+        }
+
+        .child {
+            display: none;
+            /*position: absolute;*/
+            /*z-index:999;*/
+            /*top: 100px;*/
+            width: 100%;
+            font-weight: normal;
+            /*padding: 10px;*/
+            font-size: 18px;
+            color: #666;
+        }
+
+        .child li {
+            line-height: 60px;
+            border-bottom: solid 1px #8a8a8a;
+
+        }
+
+        .parent {
+            font-size: 18px;
+            color: #666;
+
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .horizontal-container {
+            margin: 0 auto;
+            /*background-color: #f4ffe3;*/
+            width: 100%;
+            position: relative;
+            /*border: 1px solid #e0ebcf;*/
+        }
+
+        .scroll-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scroll-wrapper {
+            margin: 0 auto;
+            /* overflow: hidden; */
+            border-radius: 5px;
+            overflow-x: auto;
+            -webkit-backface-visibility: hidden;
+            -webkit-overflow-scrolling: touch; /* 2 */
+        }
+
+        .scroll-content {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .scroll-item {
+            height: 48px;
+            font-size: 24px;
+            line-height: 48px;
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        .text-red {
+            color: black;
+            font-weight: bold;
+            background-image: url(../img/red-back.png);
+        }
+
+        .h5, h5 {
+            font-size: 1.1rem;
+        }
+    </style>
+    @endsection
 @section('content')
     <div class="container-fluit">
         <img class="banner" src="/img/new/Socialresponsibility-banner.jpg" alt=""/>
@@ -7,14 +150,33 @@
     <div class="container">
         <div class="blank-block"></div>
         <div class="row">
-            <div class="col-3">
+            @if(Agent::isDeskTop())
+            <div class="col-lg-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">推动区域发展</a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">创造和谐乡村</a>
                     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">助力现代农业</a>
                 </div>
             </div>
-            <div class="col-9">
+
+            @elseif(Agent::isPhone())
+                <div class="horizontal-container">
+                    <div class="scroll-wrapper" ref="scroll">
+                        <ul class="scroll-content nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item scroll-item">
+                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">推动区域发展</a>
+                            </li>
+                            <li class="nav-item scroll-item">
+                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">创造和谐乡村</a>
+                            </li>
+                            <li class="nav-item scroll-item">
+                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">助力现代农业</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            @endif
+            <div class="col-12 col-lg-9">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <div class="blank-block"></div>
@@ -57,3 +219,17 @@
         <div class="blank-block"></div>
     </div>
     @endsection
+
+@section('js')
+    <script src="https://jkwedu-new.oss-cn-beijing.aliyuncs.com/script/bscroll.min.js"></script>
+    <script>
+        window.onload = function () {
+            let wrapper = document.querySelector('.scroll-wrapper')
+            let scroll = new BScroll(wrapper, {
+                scrollX: true,
+                scrollY: false,
+                click: true,
+            })
+        }
+    </script>
+@endsection

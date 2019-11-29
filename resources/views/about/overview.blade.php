@@ -43,7 +43,7 @@
                         <br>
                         <br>
 {{--                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/01-Company profile.jpg" alt=""/>--}}
-                        <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/01-Company%20profile.jpg' }}" alt=""/>
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/01-Company%20profile.jpg' }}" alt=""/>
                     </div>
                 </div>
             </div>
