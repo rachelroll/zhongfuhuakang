@@ -25,6 +25,11 @@
         .font-normal img {
             overflow: hidden;
         }
+
+        .font-normal img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
     @endsection
 
@@ -68,10 +73,10 @@
 
 @stop
 
-@section('js')
-    <script>
-        window.onload = function () {
-            $('.font-normal img').addClass('img-fluid');
-        }
-    </script>
-    @endsection
+{{--@section('js')--}}
+{{--    <script>--}}
+{{--        window.onload = function () {--}}
+{{--            $('.font-normal img').addClass('img-fluid');--}}
+{{--        }--}}
+{{--    </script>--}}
+{{--    @endsection--}}
