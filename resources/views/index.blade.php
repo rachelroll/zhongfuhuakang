@@ -114,16 +114,16 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/new/home-banner1.jpg" class="d-block w-100" alt="...">
+                    <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/home-banner1.jpg' }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/new/home-banner2.jpg" class="d-block w-100" alt="...">
+                    <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/home-banner2.jpg' }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/new/home-banner3.jpg" class="d-block w-100" alt="...">
+                    <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/home-banner3.jpg' }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/new/home-banner4.jpg" class="d-block w-100" alt="...">
+                    <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/home-banner4.jpg' }}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -208,7 +208,7 @@
                     <div>
                         <div class="img-block wrap-img">
                             <a href="{{ route('about.overview') }}">
-                                <img class="image rounded scale-big" src="./img/new/370x290-aboutus.jpg" alt=""/>
+                                <img class="image rounded scale-big" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/370x290-aboutus.jpg' }}" alt=""/>
                             </a>
                         </div>
                         <div class="label-swiper">
@@ -221,7 +221,7 @@
                    <div>
                        <div class="img-block wrap-img">
                            <a href="{{ route('business.system') }}">
-                               <img class="image rounded scale-big" src="./img/new/370x290-Business-layout.jpg" alt=""/>
+                               <img class="image rounded scale-big" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/370x290-Business-layout.jpg' }}" alt=""/>
                            </a>
                        </div>
                        <div class="label-swiper">
@@ -233,7 +233,7 @@
                     <div>
                         <div class="img-block wrap-img">
                             <a href="{{ route('news.index') }}">
-                                <img class="image rounded scale-big" src="./img/new/370x290-news.jpg" alt=""/>
+                                <img class="image rounded scale-big" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/370x290-news.jpg' }}" alt=""/>
                             </a>
                         </div>
                         <div class="label-swiper">
@@ -245,7 +245,7 @@
                     <div>
                         <div class="img-block wrap-img">
                             <a href="">
-                                <img class="image rounded scale-big" src="./img/new/370x290-Agriculturalresearch.jpg" alt=""/>
+                                <img class="image rounded scale-big" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/370x290-Agriculturalresearch.jpg' }}" alt=""/>
                             </a>
 
                         </div>
@@ -258,7 +258,7 @@
                     <div>
                         <div class="img-block wrap-img">
                             <a href="{{ route('responsibility.index') }}">
-                                <img class="image rounded scale-big" src="./img/new/370x290-Socialresponsibility.jpg" alt=""/>
+                                <img class="image rounded scale-big" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/370x290-Socialresponsibility.jpg' }}" alt=""/>
                             </a>
 
                             {{--                        <div class="mask" style="display: none" label = 'overview'>--}}
@@ -292,37 +292,37 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="/img/new/zhongfuxianglv.png" alt=""/>
+                        <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/zhongfuxianglv.png' }}" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="/img/new/yuanmengxiangcun.png" alt=""/>
+                        <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/yuanmengxiangcun.png' }}" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="/img/new/tuancan.png" alt=""/>
+                        <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/tuancan.png' }}" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="/img/new/jiaheyangguanglogo.jpg" alt=""/>
+                        <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/jiaheyangguanglogo.jpg' }}" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="/img/new/meinuologo.jpg" alt=""/>
+                        <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/meinuologo.jpg' }}" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="/img/new/nongjilogo.jpg" alt=""/>
+                        <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/nongjilogo.jpg' }}" alt=""/>
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="">
-                        <img src="/img/new/bangdelogo.jpg" alt=""/>
+                        <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/bangdelogo.jpg' }}" alt=""/>
                     </a>
                 </div>
             </div>

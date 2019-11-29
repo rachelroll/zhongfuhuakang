@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-between sticky-top" style=" height: 60px; margin-top: 30px">
             <div class="col-xs-auto mr-auto">
-                <img style="width: 80%" src="/img/new/logo.png" alt=""/>
+                <img style="width: 80%" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/logo.png'}}" alt=""/>
             </div>
             <div class="col-xs-auto" style="top: 10px">
                 <ul class="nav nav-pills">
@@ -60,7 +60,7 @@
 
         <!-- Navbar brand -->
 {{--        <a class="navbar-brand" href="#">--}}
-            <img src="/img/new/logo.png" alt="" style="width: 40%; height: 40%"/>
+            <img src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/logo.png' }}" alt="" style="width: 40%; height: 40%"/>
 {{--        </a>--}}
 
         <!-- Collapse button -->

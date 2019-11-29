@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluit">
-        <img class="banner" src="/img/new/aboutus-banner.jpg" alt=""/>
+        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/aboutus-banner.jpg' }}" alt=""/>
     </div>
 
     <div class="blank-block"></div>
@@ -31,9 +31,9 @@
                         </div>
                         <br>
                         <br>
-                        <img class="banner" src="/img/new/03-corporate culture-1.jpg" alt=""/>
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/03-corporate culture-1.jpg' }}" alt=""/>
                         <div class="blank-block"></div>
-                        <img class="banner" src="/img/new/03-corporate culture-2.jpg" alt=""/>
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/03-corporate culture-2.jpg' }}" alt=""/>
                     </div>
                 </div>
             </div>

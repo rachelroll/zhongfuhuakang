@@ -45,7 +45,7 @@
             </div>
             <div class="row">
                 <div class="col-md-7 col-12" style="margin-bottom: 10px">
-                    <img class="banner" src="/img/new/04-Business system-01.jpg" alt=""/>
+                    <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/04-Business system-01.jpg' }}" alt=""/>
                 </div>
                 <div class="col-md-5 col-12">
                     <p>
@@ -68,7 +68,7 @@
                     </p>
                 </div>
                 <div class="col-md-7 col-12">
-                    <img class="banner" src="/img/new/04-Business system-02.jpg" alt=""/>
+                    <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/04-Business system-02.jpg' }}" alt=""/>
                 </div>
             </div>
             <div class="blank-block"></div>
@@ -81,7 +81,7 @@
             </div>
             <div class="row">
                 <div class="col-md-7 col-12"  style="margin-bottom: 10px">
-                    <img class="banner" src="/img/new/04-Business system-03.jpg" alt=""/>
+                    <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/04-Business system-03.jpg' }}" alt=""/>
                 </div>
                 <div class="col-md-5 col-12">
                     <p>
@@ -105,7 +105,7 @@
                     </p>
                 </div>
                 <div class="col-md-7 col-12">
-                    <img class="banner" src="/img/new/04-Business system-04.jpg" alt=""/>
+                    <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/04-Business system-04.jpg' }}" alt=""/>
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@
             </div>
             <div class="blank-block"></div>
             <div>
-                <img class="banner" src="/img/new/05-Strategic layout.jpg" alt=""/>
+                <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/05-Strategic layout.jpg' }}" alt=""/>
             </div>
             <div class="blank-block"></div>
             <p>
@@ -146,7 +146,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="">
-                        <img class="banner" src="/img/new/05_01-Strategic layout.jpg" alt=""/>
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/05_01-Strategic layout.jpg' }}" alt=""/>
                     </div>
                     <div class="blank-block"></div>
                     <p>
@@ -156,7 +156,7 @@
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <div class="">
-                        <img class="banner" src="/img/new/05_02-Strategic-layout.jpg" alt=""/>
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/05_02-Strategic-layout.jpg' }}" alt=""/>
                     </div>
                     <div class="blank-block"></div>
                     <p>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                     <div class="">
-                        <img class="banner" src="/img/new/05_03-Strategic-layout.jpg" alt=""/>
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/05_03-Strategic-layout.jpg' }}" alt=""/>
                     </div>
                     <div class="blank-block"></div>
                     <p>
@@ -181,7 +181,7 @@
             </div>
             <div class="blank-block"></div>
             <div>
-                <img class="banner" src="/img/new/06-agricultural-production.jpg" alt=""/>
+                <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/06-agricultural-production.jpg' }}" alt=""/>
             </div>
             <div class="blank-block"></div>
             <div>
@@ -199,7 +199,7 @@
             </div>
             <div class="blank-block"></div>
             <div>
-                <img class="banner" src="/img/new/07-Agricultural-Tourism.jpg" alt=""/>
+                <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/07-Agricultural-Tourism.jpg' }}" alt=""/>
             </div>
             <div class="blank-block"></div>
             <div>
@@ -219,7 +219,7 @@
             </div>
             <div class="blank-block"></div>
             <div>
-                <img class="banner" src="/img/new/08-E-commerce-agriculture.jpg" alt=""/>
+                <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/08-E-commerce-agriculture.jpg' }}" alt=""/>
             </div>
             <div class="blank-block"></div>
             <div>
@@ -255,7 +255,7 @@
                 <div class="tab-pane strategy fade show active" id="first" role="tabpanel"
                      aria-labelledby="first-tab">
                     <div class="">
-                        <img class="banner" src="/img/new/09_123Planning-plan-1.jpg" alt=""/>
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/09_123Planning-plan-1.jpg' }}" alt=""/>
                     </div>
                     <div class="blank-block"></div>
                     <h5>战略目标体系：</h5>
@@ -290,7 +290,7 @@
                 <div class="tab-pane strategy fade" id="second" role="tabpanel"
                      aria-labelledby="second-tab">
                     <div class="">
-                        <img class="banner" src="/img/new/09_123Planning-plan-2.jpg" alt=""/>
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/09_123Planning-plan-2.jpg' }}" alt=""/>
                     </div>
                     <div class="blank-block"></div>
                     <h5>战略目标体系：</h5>
@@ -311,7 +311,7 @@
                 </div>
                 <div class="tab-pane strategy fade" id="third" role="tabpanel" aria-labelledby="third-tab">
                     <div class="">
-                        <img class="banner" src="/img/new/09_123Planning-plan-3.jpg" alt=""/>
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/09_123Planning-plan-3.jpg' }}" alt=""/>
                     </div>
                     <div class="blank-block"></div>
                     <h5>战略目标体系：</h5>
@@ -345,7 +345,7 @@
             </div>
             <div class="blank-block"></div>
             <div>
-                <img class="banner" src="/img/new/10-Homestay.jpg" alt=""/>
+                <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/10-Homestay.jpg' }}" alt=""/>
             </div>
             <div class="blank-block"></div>
             <div>

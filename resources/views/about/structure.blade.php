@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluit">
-        <img class="banner" src="/img/new/aboutus-banner.jpg" alt=""/>
+        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/aboutus-banner.jpg' }}" alt=""/>
     </div>
 
     <div class="blank-block"></div>
@@ -29,7 +29,11 @@
                             <span class="title-decoration"></span>
 {{--                            <p style="color: #343434; font-size: 24px;">STRUCTURE</p>--}}
                         </div>
-                        <img class="banner" src="/img/new/02A-rchitecture diagram.jpg" alt=""/>
+{{--                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/02A-rchitecture diagram.jpg" alt=""/>--}}
+{{--                        <img class="banner" src="https://zhongfu-official.oss-cn-beijing.aliyuncs.com{{ 'https://' .env('CDN_DOMAIN'). '/img/new/02A-rchitecture%20diagram.jpg" alt=""/>--}}
+
+                        <img class="banner" src="{{ 'https://' .env('CDN_DOMAIN'). '/img/new/02A-rchitecture%20diagram.jpg' }}" alt=""/>
+
                     </div>
                 </div>
             </div>
