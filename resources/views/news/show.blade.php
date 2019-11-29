@@ -67,3 +67,11 @@
     <div class="blank-block"></div>
 
 @stop
+
+@section('js')
+    <script>
+        window.onload = function () {
+            $('.font-normal img').addClass('img-fluid');
+        }
+    </script>
+    @endsection
